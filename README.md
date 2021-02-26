@@ -542,7 +542,7 @@ Running the above will take a while on a single GPU, so you'll probably want to 
 
 Finally, compute MDL and save plots to `$BASE_DIR/scripts/plots` with:
 ```bash
-python scripts/plot_results.py --exp clevr
+python $BASE_DIR/scripts/plot_results.py --exp clevr
 ```
 
 If you just want to compute MDL for one question type (`TN` above), just run:

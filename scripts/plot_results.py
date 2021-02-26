@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import os
 import pandas as pd
-from transformers.rda_utils import load_losses, mn2name, tn2name, group2datasethps, plot_mdls, plot_loss_data_curve_prequential, plot_wordtype_importances, get_mn2tn2lossmatrix, get_ablation2mdl, get_ablation2mdlincrease, plot_loss_reduction_by_loss_with_error, cm, glue_nli_tasks, PLOTS_DIR, save_and_show_plot
+from rda_utils import load_losses, mn2name, tn2name, group2datasethps, plot_mdls, plot_loss_data_curve_prequential, plot_wordtype_importances, get_mn2tn2lossmatrix, get_ablation2mdl, get_ablation2mdlincrease, plot_loss_reduction_by_loss_with_error, cm, glue_nli_tasks, PLOTS_DIR, save_and_show_plot
 
 matplotlib.use("agg")  # no display to GUI (don't use this for e.g. jupyter notebook)
 

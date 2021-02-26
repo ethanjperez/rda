@@ -7,7 +7,7 @@ import random
 import shutil
 from tqdm.auto import tqdm
 from transformers.data.processors.glue import glue_processors
-from transformers.rda_utils import tune_std, tune_temperature
+from rda_utils import tune_std, tune_temperature
 
 
 train_parameters = {
