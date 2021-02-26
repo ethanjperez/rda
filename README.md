@@ -23,10 +23,12 @@ Create folders for storing data and model checkpoints/results:
 ```bash
 mkdir $BASE_DIR/data  # or symlink to another location that can hold large files
 mkdir $BASE_DIR/checkpoint  # or symlink to another location that can hold large files
+mkdir $BASE_DIR/checkpoint/rda  # subdirectory where we'll save most results
 ```
 
-## Installing dependencies for RDA on HotpotQA/e-SNLI/GLUE/SNLI/ANLI
+## Installing Dependencies
 
+To run experiments on CLEVR, please jump to the section [RDA on CLEVR](https://github.com/ethanjperez/rda#rda-on-clevr). Otherwise, continue below. 
 Setup a Python 3.7+ virtual environment. We [installed Anaconda 3](https://docs.anaconda.com/anaconda/install/) and created a Python 3.7 conda environment:
 ```bash
 conda create -y -n rda python=3.7
@@ -39,7 +41,6 @@ conda install -y pytorch=1.4 torchvision cudatoolkit=10.1 -c pytorch
 ```
 Other versions for PyTorch/CUDA may also be compatible, and CPU-only installation is fine if you'd just like to reproduce our plots without training your own models. Then, install the remaining dependencies:
 ```bash
-cd $BASE_DIR
 pip install -r requirements_transformers.txt
 python -m spacy download en_core_web_lg
 cd $BASE_DIR/transformers
@@ -70,9 +71,8 @@ mkdir $BASE_DIR/data/fastText
 cd $BASE_DIR/data/fastText
 wget https://dl.fbaipublicfiles.com/fasttext/vectors-english/crawl-300d-2M.vec.zip .
 unzip crawl-300d-2M.vec.zip
+rm crawl-300d-2M.vec.zip
 ```
-
-To run experiments on CLEVR, please jump to the secion "RDA on CLEVR". Otherwise, continue below.
 
 ## Reproducing our plots from cached training results
 
