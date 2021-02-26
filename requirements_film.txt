@@ -1,0 +1,9 @@
+numpy
+Pillow
+scipy==1.1.0
+h5py
+tqdm
+ipdb
+termcolor
+matplotlib
+pandas

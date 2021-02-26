@@ -27,27 +27,26 @@ mkdir $BASE_DIR/checkpoint  # or symlink to another location that can hold large
 
 ## Installing dependencies for RDA on HotpotQA/e-SNLI/GLUE/SNLI/ANLI
 
-Install CUDA to train models on GPU. We used CUDA 10.1, but other versions should work as well. You can skip this step if you'd just like to reproduce our paper plots from our cached training results (without training models on your own).
-
-Then, setup a Python 3.7+ virtual environment. We [installed Anaconda 3](https://docs.anaconda.com/anaconda/install/) and created a Python 3.7 conda environment:
+Setup a Python 3.7+ virtual environment. We [installed Anaconda 3](https://docs.anaconda.com/anaconda/install/) and created a Python 3.7 conda environment:
 ```bash
-conda create -n rda python=3.7
+conda create -y -n rda python=3.7
 conda activate rda
 ```
 
-Next, install PyTorch ([instructions](https://pytorch.org/)). We used PyTorch 1.4 (other versions for both may potentially be compatible), using the below command:
+Next, install PyTorch (instructions [here](https://pytorch.org/)). We used PyTorch 1.4 with CUDA 10.1, installing with the below command:
 ```bash
 conda install -y pytorch=1.4 torchvision cudatoolkit=10.1 -c pytorch
 ```
-Then, install the remaining dependencies:
+Other versions for PyTorch/CUDA may also be compatible, and CPU-only installation is fine if you'd just like to reproduce our plots without training your own models. Then, install the remaining dependencies:
 ```bash
-cd $BASE_DIR/rda
-pip install -r requirements.txt
-python -m spacy download en
+cd $BASE_DIR
+pip install -r requirements_transformers.txt
+python -m spacy download en_core_web_lg
+cd $BASE_DIR/transformers
 pip install --editable .
 ```
 
-If your GPU supports floating point 16 training, you can train transformer models faster by installing NVIDIA/apex ([instructions](https://github.com/NVIDIA/apex)), e.g.:
+If your GPU supports floating point 16 training, you can train transformer models faster by installing NVIDIA/apex (instructions [here](https://github.com/NVIDIA/apex)), e.g.:
 ```bash
 cd $BASE_DIR
 git clone https://github.com/NVIDIA/apex.git
@@ -477,12 +476,9 @@ Then, setup a Python 3.7+ virtual environment. We [installed Anaconda 3](https:/
 ```bash
 conda create -n film python=3.7
 conda activate film
-# Install PyTorch (Instructions here: https://pytorch.org/). We used the below command:
+# Install PyTorch (instructions here: https://pytorch.org/). We used the below command:
 conda install pytorch=0.4.1 torchvision=0.2.1 cuda92 -c pytorch
-# Install film repo dependencies
-pip install numpy Pillow scipy==1.1.0 h5py tqdm ipdb termcolor matplotlib
-# Install RDA script dependencies
-pip install pandas
+pip install -r requirements_film.txt
 cd $BASE_DIR/transformers
 pip install --editable .
 ```
@@ -540,7 +536,7 @@ done
 Each call to `scripts/train/num_train_samples.modified_questions.prequential.sh` trains a single FiLM model for a particular random seed (`SEED`), task (with name `TN`, i.e., the question type), number of subanswers (`SAS`), and prequential block number (`PBN` indicates training on all blocks of data up to and including block number `PBN`).
 Running the above will take a while on a single GPU, so you'll probably want to change the for loop as needed (e.g., just use one random seed or one task) or parallelize the above training runs by running each as a separate job on a cluster.
 
-Finally, compute MDL and save plots to `$BASE_DIR/scripts/plots` by deactivating your current environment, activating the `rda` environment for non-CLEVR experiments, and then running:
+Finally, compute MDL and save plots to `$BASE_DIR/scripts/plots` with:
 ```bash
 python scripts/plot_results.py --exp clevr
 ```
