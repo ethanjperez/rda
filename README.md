@@ -28,7 +28,7 @@ mkdir $BASE_DIR/checkpoint/rda  # subdirectory where we'll save most results
 
 ## Installing Dependencies
 
-To run experiments on CLEVR, please jump to the section [RDA on CLEVR](https://github.com/ethanjperez/rda#rda-on-clevr). Otherwise, continue below. 
+To run experiments on CLEVR, please jump to [RDA on CLEVR](https://github.com/ethanjperez/rda#rda-on-clevr). Otherwise, continue below. 
 Setup a Python 3.7+ virtual environment. We [installed Anaconda 3](https://docs.anaconda.com/anaconda/install/) and created a Python 3.7 conda environment:
 ```bash
 conda create -y -n rda python=3.7
@@ -173,6 +173,7 @@ The above will choose hyperparameters using FastText's autotune functionality an
 
 Here is how you can train the tranformer-based models that we trained for our e-SNLI experiments (runs on 1 GPU):
 ```bash
+FOL=-1  # floating-point optimization level ("-1" for fp32, "2" for fp16 via apex)
 cd $BASE_DIR/transformers
 for MN in "distilroberta-base" "distilgpt2" "roberta-base" "gpt2" "facebook/bart-base" "albert-base-v2" "roberta-large" "roberta-base.from_scratch" "roberta-large.from_scratch"; do
 for TN in "esnli.input-raw" "esnli.input-markedonly" "esnli.input-markedmasked" "esnli.input-markedunmasked" "esnli.input-marked" "esnli.input-raw,explanation" "esnli.input-explanation"; do
@@ -340,6 +341,7 @@ The above will save data to different folders `$BASE_DIR/data/$TN` where the dat
 
 Then, you can sweep over hyperparameters for pretrained Longformer BASE model on HotpotQA (with subanswers from the above decomposition methods) like so:
 ```bash
+FOL=-1  # floating-point optimization level ("-1" for fp32, "2" for fp16 via apex)
 cd $BASE_DIR/transformers
 NTE=6  # number of training epochs
 BS=32  # effective batch size
@@ -354,7 +356,7 @@ TBS=$((BS/GAS))
 OUTPUT_DIR="checkpoint/rda/tn-$TN.mn-$MN.bs-$BS.lr-$LR.nte-$NTE.seed-$SEED.pbn-$PBN"
 CPUS=4  # Number of CPU available on your system (e.g., for data loading/processing)
 mkdir -p $OUTPUT_DIR
-python examples/question-answering/run_squad.py --model_type longformer --model_name_or_path $MN --data_dir data/$TN --do_train --do_eval --dev_file dev1.json --test_file dev2.json --fp16_opt_level 2 --output_dir $OUTPUT_DIR --per_gpu_train_batch_size $TBS --per_gpu_eval_batch_size $((2*TBS)) --gradient_accumulation_steps $GAS --learning_rate $LR --max_seq_length 4096 --doc_stride 1024 --seed $SEED --max_grad_norm inf --adam_epsilon 1e-6 --weight_decay 0.01 --warmup_proportion 0.06 --num_train_epochs $NTE --threads $CPUS --logging_steps 1 --prequential_block_no $PBN --early_stopping --evaluate_loss --overwrite_output_dir
+python examples/question-answering/run_squad.py --model_type longformer --model_name_or_path $MN --data_dir data/$TN --do_train --do_eval --dev_file dev1.json --test_file dev2.json --fp16_opt_level $FOL --output_dir $OUTPUT_DIR --per_gpu_train_batch_size $TBS --per_gpu_eval_batch_size $((2*TBS)) --gradient_accumulation_steps $GAS --learning_rate $LR --max_seq_length 4096 --doc_stride 1024 --seed $SEED --max_grad_norm inf --adam_epsilon 1e-6 --weight_decay 0.01 --warmup_proportion 0.06 --num_train_epochs $NTE --threads $CPUS --logging_steps 1 --prequential_block_no $PBN --early_stopping --evaluate_loss --overwrite_output_dir
 done
 done
 done

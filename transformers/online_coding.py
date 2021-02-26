@@ -17,6 +17,7 @@ def main():
     parser.add_argument("--tn", default="", type=str, required=True, help="The task name / dataset to run on")
     parser.add_argument("--max_pbn", default=7, type=int, required=True, help="Max prequential block number to include. Use -1 to just preprocess dataset.")
     parser.add_argument("--cpus", default=1, type=int, required=True, help="The number of available CPUs (for e.g. data loading and preprocessing).")
+    parser.add_argument("--fp16_opt_level", default=2, type=int, required=True, help="The floating point optimization level (e.g., -1 for fp32 and 2 for fp16).")
     args = parser.parse_args()
 
     hps = mn2hps(args.mn)
@@ -35,7 +36,7 @@ def main():
         pbns = [-1]
     else:
         gpus = 1
-        flags = "--fp16 --fp16_opt_level O2"
+        flags = "" if args.fp16_opt_level < 0 else f"--fp16 --fp16_opt_level O{args.fp16_opt_level}"
         pbns = list(range(args.max_pbn + 1))
 
     def launch(bs, lr, seed, pbn):
