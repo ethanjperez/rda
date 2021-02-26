@@ -4,11 +4,11 @@ Below, we will step through the procedure we used to produce our results.
 To see how we train a model on dataset, please skim through the README to see the bash snippet and python script we use to train that model.
 To see how we compute minimum description length after training our models, please see `scripts/plot_results_prequential.ipynb`.
 
-Code Overview:
-- `film/`: Code for training FiLM (modified from the original [FiLM codebase](https://github.com/ethanjperez/film)). Also includes scripts for 
-training FastText models and evaluating MDL.
-- `transformers/`: Code for training other, transformer-based models (modified from [HuggingFace 
-Transformers](https://github.com/huggingface/transformers)).
+*Code Overview*:
+- `film/`: Code for training FiLM models on CLEVR (modified from the [FiLM codebase](https://github.com/ethanjperez/film))
+- `transformers/`: Code for training other, transformer-based models (modified from [HuggingFace Transformers](https://github.com/huggingface/transformers))
+- `scripts/`: All other code for reproducing our results, including code for formatting data (including adding subquestions/subanswers, adding explanations/rationales, ablating data, etc.), training FastText models, tuning model temperature, evaluating MDL / plotting results, and computing other statistics we report
+- `gender_words_list.csv`: The list of gendered words that we used for gender bias evaluation, originally from these [two](https://www.aclweb.org/anthology/2020.emnlp-main.656/) [papers](https://www.aclweb.org/anthology/2020.emnlp-main.23/)
 
 ## Initial Setup
 
@@ -19,23 +19,23 @@ cd rda
 export BASE_DIR=$PWD
 ```
 
-You'll need to create a `data` folder (either with `mkdir $BASE_DIR/data` or by symlinking to a location that can hold large files).
-Similarly, you'll need to create a `checkpoint` folder for saving model results (either with `mkdir $BASE_DIR/checkpoint` or symlinking).
+Create folders for storing data and model checkpoints/results:
+```bash
+mkdir $BASE_DIR/data  # or symlink to another location that can hold large files
+mkdir $BASE_DIR/checkpoint  # or symlink to another location that can hold large files
+```
 
 ## Installing dependencies for RDA on HotpotQA/e-SNLI/GLUE/SNLI/ANLI
 
-Install CUDA to train models on GPU. We used CUDA 10.1, but other versions should work as well. You can skip this step if you'd just like to 
-reproduce our paper plots from our cached training results (without training models on your own).
+Install CUDA to train models on GPU. We used CUDA 10.1, but other versions should work as well. You can skip this step if you'd just like to reproduce our paper plots from our cached training results (without training models on your own).
 
-Then, setup a Python 3.7+ virtual environment. We [installed Anaconda 3](https://docs.anaconda.com/anaconda/install/) and created a Python 3.7 
-conda environment:
+Then, setup a Python 3.7+ virtual environment. We [installed Anaconda 3](https://docs.anaconda.com/anaconda/install/) and created a Python 3.7 conda environment:
 ```bash
 conda create -n rda python=3.7
 conda activate rda
 ```
 
-Next, install PyTorch ([instructions](https://pytorch.org/)). We used PyTorch 1.4 (other versions for both may potentially be compatible), 
-using the below command:
+Next, install PyTorch ([instructions](https://pytorch.org/)). We used PyTorch 1.4 (other versions for both may potentially be compatible), using the below command:
 ```bash
 conda install -y pytorch=1.4 torchvision cudatoolkit=10.1 -c pytorch
 ```
@@ -47,20 +47,16 @@ python -m spacy download en
 pip install --editable .
 ```
 
-If your GPU supports floating point 16 training, you can train transformer models faster by installing NVIDIA/apex 
-([instructions](https://github.com/NVIDIA/apex)), e.g.:
+If your GPU supports floating point 16 training, you can train transformer models faster by installing NVIDIA/apex ([instructions](https://github.com/NVIDIA/apex)), e.g.:
 ```bash
 cd $BASE_DIR
 git clone https://github.com/NVIDIA/apex.git
 cd apex
-export TORCH_CUDA_ARCH_LIST="6.0;6.1;6.2;7.0;7.5"  # optional, but helps to install apex in a way that is compatible with many different GPU 
-types
+export TORCH_CUDA_ARCH_LIST="6.0;6.1;6.2;7.0;7.5"  # optional, but helps to install apex in a way that is compatible with many different GPU types
 pip install -v --no-cache-dir --global-option="--cpp_ext" --global-option="--cuda_ext" --global-option="--deprecated_fused_adam" ./
 ```
-If you run into installation errors with the above, look through the issues on the [NVIDIA/apex](https://github.com/NVIDIA/apex) repo for your 
-installation error, or just skip this part for now.
-I was able to fix my installation errors by using an older version of apex, by running `cd $BASE_DIR/apex; git reset --hard de6378f5da` after 
-`git clone https://github.com/NVIDIA/apex.git`.
+If you run into installation errors with the above, look through the issues on the [NVIDIA/apex](https://github.com/NVIDIA/apex) repo for your installation error, or just skip this part for now.
+I was able to fix my installation errors by using an older version of apex, by running `cd $BASE_DIR/apex; git reset --hard de6378f5da` after `git clone https://github.com/NVIDIA/apex.git`.
 
 If you'd like to train FastText models (optional), then install FastText like so:
 ```bash
@@ -81,14 +77,11 @@ To run experiments on CLEVR, please jump to the secion "RDA on CLEVR". Otherwise
 
 ## Reproducing our plots from cached training results
 
-You can compute MDL and reproduce all of our plots by downloading the 
-[results](https://drive.google.com/file/d/1sWcjvOdNg_TEV4jWyY6lX2ToOomiEv9h/view) our of training runs (*skip this step if you'd like to train 
-your own models*):
+You can compute MDL and reproduce all of our plots by downloading the [results](https://drive.google.com/file/d/1sWcjvOdNg_TEV4jWyY6lX2ToOomiEv9h/view) our of training runs (*skip this step if you'd like to train your own models*):
 ```bash
 # Function to google drive from terminal
 function gdrive_download () {
-  CONFIRM=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 
-"https://docs.google.com/uc?export=download&id=$
+  CONFIRM=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate "https://docs.google.com/uc?export=download&id=$
   wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$CONFIRM&id=$1" -O $2
   rm -rf /tmp/cookies.txt
 }
@@ -100,8 +93,7 @@ tar -xvzf rda_results.tar.gz
 rmdir rda
 mv rda_results rda
 ```
-If you run into issues when downloading from Google Drive with the `gdrive_download` command or when extracting from the downloaded `tar.gz` 
-file, just download directly from Google Drive [here](https://drive.google.com/file/d/1sWcjvOdNg_TEV4jWyY6lX2ToOomiEv9h/view).
+If you run into issues when downloading from Google Drive with the `gdrive_download` command or when extracting from the downloaded `tar.gz` file, just download directly from Google Drive [here](https://drive.google.com/file/d/1sWcjvOdNg_TEV4jWyY6lX2ToOomiEv9h/view).
 
 Then, you can plot our results on CLEVR using:
 ```bash
@@ -110,8 +102,7 @@ EXP=clevr # Change to plot results for other datasets
 python scripts/plot_results.py --exp $EXP
 ```
 Likewise, plot our results for HotpotQA with `EXP=hotpot` and for e-SNLI with `EXP=esnli`.
-To plot GLUE/SNLI/ANLI results, set `EXP` to the ablation type (in order of plot appearance in our paper): `pos`, `gender`, `shuffle` (word 
-order ablation), `content`, `causal`, `logical`, `gender_frequency_controlled`, `length`.
+To plot GLUE/SNLI/ANLI results, set `EXP` to the ablation type (in order of plot appearance in our paper): `pos`, `gender`, `shuffle` (word order ablation), `content`, `causal`, `logical`, `gender_frequency_controlled`, `length`.
 
 ## RDA on e-SNLI
 
@@ -172,38 +163,27 @@ The above script will save data to different folders `$BASE_DIR/data/$TN` where 
 Here is how you can train the FastText classifier on the same data (runs on CPU):
 ```bash
 for PBN in 0 1 2 3 4 5 6 7; do
-for TN in "esnli.input-raw" "esnli.input-markedonly" "esnli.input-markedmasked" "esnli.input-markedunmasked" "esnli.input-marked" 
-"esnli.input-raw,explanation" "esnli.input-explanation"; do
-python $BASE_DIR/scripts/train_fasttext_classifier.py --task_name $TN --prequential_block_no $PBN --autotune_duration 7200 --seeds 12 20 21 22 
-23
+for TN in "esnli.input-raw" "esnli.input-markedonly" "esnli.input-markedmasked" "esnli.input-markedunmasked" "esnli.input-marked" "esnli.input-raw,explanation" "esnli.input-explanation"; do
+python $BASE_DIR/scripts/train_fasttext_classifier.py --task_name $TN --prequential_block_no $PBN --autotune_duration 7200 --seeds 12 20 21 22 23
 done
 done
 ```
 The above will train five FastText models with 5 different random seeds to evaluate codelengths (loss) for each block of the training data.
-It will also tune the softamx temperature of FastText models automatically (via grid search, choosing the best tmeperature based on validation 
-loss).
-The above will choose hyperparameters using FastText's autotune functionality and then use the chosen hyperparameters from the first random 
-seed to train four additional models using different random seeds (for model training and data orderings for online/prequential coding).
+It will also tune the softamx temperature of FastText models automatically (via grid search, choosing the best tmeperature based on validation loss).
+The above will choose hyperparameters using FastText's autotune functionality and then use the chosen hyperparameters from the first random seed to train four additional models using different random seeds (for model training and data orderings for online/prequential coding).
 
 Here is how you can train the tranformer-based models that we trained for our e-SNLI experiments (runs on 1 GPU):
 ```bash
 cd $BASE_DIR/transformers
-for MN in "distilroberta-base" "distilgpt2" "roberta-base" "gpt2" "facebook/bart-base" "albert-base-v2" "roberta-large" 
-"roberta-base.from_scratch" "roberta-large.from_scratch"; do
-for TN in "esnli.input-raw" "esnli.input-markedonly" "esnli.input-markedmasked" "esnli.input-markedunmasked" "esnli.input-marked" 
-"esnli.input-raw,explanation" "esnli.input-explanation"; do
-python online_coding.py --mn $MN --tn $TN --max_pbn 7 --cpus 1  # NB: Increase --cpus if you have more available, for faster data loading and 
-preprocessing
+for MN in "distilroberta-base" "distilgpt2" "roberta-base" "gpt2" "facebook/bart-base" "albert-base-v2" "roberta-large" "roberta-base.from_scratch" "roberta-large.from_scratch"; do
+for TN in "esnli.input-raw" "esnli.input-markedonly" "esnli.input-markedmasked" "esnli.input-markedunmasked" "esnli.input-marked" "esnli.input-raw,explanation" "esnli.input-explanation"; do
+python online_coding.py --mn $MN --tn $TN --max_pbn 7 --cpus 1  # NB: Increase --cpus if you have more available, for faster data loading and preprocessing
 done
 done
 ```
-The above will train five models with different random seeds for each model class (`roberta-base`, `gpt2`, etc.)  to evaluate codelengths 
-(loss) for each block of the training data.
-It will run a hyperparameter sweep for a given model class and then use the chosen hyperparameters from the first random seed to train four 
-additional models using different random seeds (for model training and data orderings for online/prequential coding).
-In practice, you'll probably want to parallelize calls to `online_coding.py` for different model classes and tasks Running the above will take 
-a while on a single GPU, so you'll probably want to change the for loop as needed (e.g., just use one random seed or one task) or parallelize 
-the above training runs by running each as a separate job on a cluster.
+The above will train five models with different random seeds for each model class (`roberta-base`, `gpt2`, etc.)  to evaluate codelengths (loss) for each block of the training data.
+It will run a hyperparameter sweep for a given model class and then use the chosen hyperparameters from the first random seed to train four additional models using different random seeds (for model training and data orderings for online/prequential coding).
+In practice, you'll probably want to parallelize calls to `online_coding.py` for different model classes and tasks Running the above will take a while on a single GPU, so you'll probably want to change the for loop as needed (e.g., just use one random seed or one task) or parallelize the above training runs by running each as a separate job on a cluster.
 The below command will tune temperatures (parallelized across CPU cores) for all transformer-based models trained above:
 ```bash
 python $BASE_DIR/scripts/tune_temperature_parallelized.py --group esnli
@@ -213,11 +193,9 @@ Finally, compute MDL using the codelengths obtained from above and save plots to
 ```bash
 python scripts/plot_results.py --exp esnli
 ```
-*Note 1*: The above script will also tune the softmax temperatures for any models that have not had temperature tuned already via 
-`tune_temperature_parallelized.py` (though `tune_temperature_parallelized.py` is parallelized and thus faster).
+*Note 1*: The above script will also tune the softmax temperatures for any models that have not had temperature tuned already via `tune_temperature_parallelized.py` (though `tune_temperature_parallelized.py` is parallelized and thus faster).
 
-*Note 2*: If you downloaded our results earlier, you'll want to delete them before running `scripts/plot_results.py`, as the script loads in 
-the cached results if they are available. You can delete the cached results like so:
+*Note 2*: If you downloaded our results earlier, you'll want to delete them before running `scripts/plot_results.py`, as the script loads in the cached results if they are available. You can delete the cached results like so:
 ```bash
 rm $BASE_DIR/checkpoint/*pbn2seed2hpstr2stats.json $BASE_DIR/checkpoint/*/*pbn2seed2hpstr2stats.json
 ```
@@ -275,8 +253,7 @@ done
 You'll now have ~20 different ablated versions of the original dataset.
 Here, we'll show how to train models on the original vs. word-shuffled text (used for our word order experiments).
 Just use a different task name (`TN`) for other dataset ablations, matching the name of the ablation's directory.
-For example, to train of CoLA with (1) input nouns masked use `TN=cola.mask_noun` and (2) the same fraction of input words use 
-`TN=cola.mask_noun_fraction`.
+For example, to train of CoLA with (1) input nouns masked use `TN=cola.mask_noun` and (2) the same fraction of input words use `TN=cola.mask_noun_fraction`.
 
 You can train FastText models on the above data in the same way as for e-SNLI above (just updating `TN`):
 ```bash
@@ -290,11 +267,9 @@ done
 Similarly, train transformer-based models with:
 ```bash
 cd $BASE_DIR/transformers
-for MN in "distilroberta-base" "distilgpt2" "roberta-base" "gpt2" "facebook/bart-base" "albert-base-v2" "roberta-large" 
-"roberta-base.from_scratch" "roberta-large.from_scratch"; do
+for MN in "distilroberta-base" "distilgpt2" "roberta-base" "gpt2" "facebook/bart-base" "albert-base-v2" "roberta-large" "roberta-base.from_scratch" "roberta-large.from_scratch"; do
 for TN in "cola" "cola.shuffle"; do
-python online_coding.py --mn $MN --tn $TN --max_pbn 7 --cpus 1  # NB: Increase --cpus if you have more available, for faster data loading and 
-preprocessing
+python online_coding.py --mn $MN --tn $TN --max_pbn 7 --cpus 1  # NB: Increase --cpus if you have more available, for faster data loading and preprocessing
 done
 done
 ```
@@ -314,13 +289,11 @@ python scripts/plot_results.py --exp shuffle --task_types cola
 
 ## RDA on HotpotQA
 
-Download the HotpotQA data, with/without subanswers from different decomposition methods as follows (located on Google drive 
-[here](https://drive.google.com/file/d/1QFMJSH5fB_OPH4xoDhvjyAWoUsLQIImw/view)):
+Download the HotpotQA data, with/without subanswers from different decomposition methods as follows (located on Google drive [here](https://drive.google.com/file/d/1QFMJSH5fB_OPH4xoDhvjyAWoUsLQIImw/view)):
 ```bash
 # Function to google drive from terminal
 function gdrive_download () {
-  CONFIRM=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 
-"https://docs.google.com/uc?export=download&id=$
+  CONFIRM=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate "https://docs.google.com/uc?export=download&id=$
   wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$CONFIRM&id=$1" -O $2
   rm -rf /tmp/cookies.txt
 }
@@ -333,8 +306,7 @@ mv hotpot.with_subanswers/* .
 rmdir hotpot.with_subanswers
 rm hotpot.with_subanswers.tar.gz
 ```
-Again, if you run into issues when downloading from Google Drive with the `gdrive_download` command or when extracting from the downloaded 
-`tar.gz` file, just download directly from Google Drive ([here](https://drive.google.com/file/d/1QFMJSH5fB_OPH4xoDhvjyAWoUsLQIImw/view)).
+Again, if you run into issues when downloading from Google Drive with the `gdrive_download` command or when extracting from the downloaded `tar.gz` file, just download directly from Google Drive ([here](https://drive.google.com/file/d/1QFMJSH5fB_OPH4xoDhvjyAWoUsLQIImw/view)).
 The above will save data to different folders `$BASE_DIR/data/$TN` where the data in `TN` is described below:
 <table>
 <tr>
@@ -367,17 +339,14 @@ The above will save data to different folders `$BASE_DIR/data/$TN` where the dat
 </tr>
 </table>
 
-Then, you can sweep over hyperparameters for pretrained Longformer BASE model on HotpotQA (with subanswers from the above decomposition 
-methods) like so:
+Then, you can sweep over hyperparameters for pretrained Longformer BASE model on HotpotQA (with subanswers from the above decomposition methods) like so:
 ```bash
 cd $BASE_DIR/transformers
 NTE=6  # number of training epochs
 BS=32  # effective batch size
 MN="allenai/longformer-base-4096"  # use "allenai/longformer-base-4096.from_scratch" to train the model from random initialization
 MAX_TBS=4  # maximum GPU batch size during training (set for a 48GB GPU, reduce to 2 or 1 as appropriate for your GPU)
-for TN in "hotpot.context-long.num_subas-0.shuffled-1" "hotpot.context-long.subqs-21979200.num_subas-2.shuffled-1" 
-"hotpot.context-long.subqs-20604919.num_subas-2.shuffled-1" "hotpot.context-long.subqs-20639223.num_subas-2.shuffled-1" 
-"hotpot.context-long.subqs-7.num_subas-2.shuffled-1" "hotpot.context-long.num_subas-2.shuffled-1"; do
+for TN in "hotpot.context-long.num_subas-0.shuffled-1" "hotpot.context-long.subqs-21979200.num_subas-2.shuffled-1" "hotpot.context-long.subqs-20604919.num_subas-2.shuffled-1" "hotpot.context-long.subqs-20639223.num_subas-2.shuffled-1" "hotpot.context-long.subqs-7.num_subas-2.shuffled-1" "hotpot.context-long.num_subas-2.shuffled-1"; do
 for PBN in 0 1 2 3 4 5 6 7; do
 for SEED in 12; do
 for LR in 3e-5 5e-5 1e-4; do
@@ -386,20 +355,14 @@ TBS=$((BS/GAS))
 OUTPUT_DIR="checkpoint/rda/tn-$TN.mn-$MN.bs-$BS.lr-$LR.nte-$NTE.seed-$SEED.pbn-$PBN"
 CPUS=4  # Number of CPU available on your system (e.g., for data loading/processing)
 mkdir -p $OUTPUT_DIR
-python examples/question-answering/run_squad.py --model_type longformer --model_name_or_path $MN --data_dir data/$TN --do_train --do_eval 
---dev_file dev1.json --test_file dev2.json --fp16_opt_level 2 --output_dir $OUTPUT_DIR --per_gpu_train_batch_size $TBS 
---per_gpu_eval_batch_size $((2*TBS)) --gradient_accumulation_steps $GAS --learning_rate $LR --max_seq_length 4096 --doc_stride 1024 --seed 
-$SEED --max_grad_norm inf --adam_epsilon 1e-6 --weight_decay 0.01 --warmup_proportion 0.06 --num_train_epochs $NTE --threads $CPUS 
---logging_steps 1 --prequential_block_no $PBN --early_stopping --evaluate_loss --overwrite_output_dir
+python examples/question-answering/run_squad.py --model_type longformer --model_name_or_path $MN --data_dir data/$TN --do_train --do_eval --dev_file dev1.json --test_file dev2.json --fp16_opt_level 2 --output_dir $OUTPUT_DIR --per_gpu_train_batch_size $TBS --per_gpu_eval_batch_size $((2*TBS)) --gradient_accumulation_steps $GAS --learning_rate $LR --max_seq_length 4096 --doc_stride 1024 --seed $SEED --max_grad_norm inf --adam_epsilon 1e-6 --weight_decay 0.01 --warmup_proportion 0.06 --num_train_epochs $NTE --threads $CPUS --logging_steps 1 --prequential_block_no $PBN --early_stopping --evaluate_loss --overwrite_output_dir
 done
 done
 done
 done
 ```
 
-To train additional random seeds using the best hyperparameters from the above sweep, simply set `LR=0` (e.g., replace `for LR in 3e-5 5e-5 
-1e-4; do` with `for LR in 0; done`) and sweep over the `SEED` variable with a for loop (e.g., replace `for SEED in 12; do` with `for SEED in 20 
-21 22 23; do`).
+To train additional random seeds using the best hyperparameters from the above sweep, simply set `LR=0` (e.g., replace `for LR in 3e-5 5e-5 1e-4; do` with `for LR in 0; done`) and sweep over the `SEED` variable with a for loop (e.g., replace `for SEED in 12; do` with `for SEED in 20 21 22 23; do`).
 Finally, compute MDL and plot/save results:
 ```bash
 python $BASE_DIR/scripts/plot_results.py --exp hotpot
@@ -413,23 +376,19 @@ python $BASE_DIR/scripts/plot_results.py --exp hotpot --seeds 12
 ### Answering Subquestions
 
 #### TODO: Check data setup details below
-Here, you can see how to answer subquestions (from [ONUS](https://arxiv.org/abs/2002.09758)) with a pretrained SQuAD (as we did) and add the 
-subanswers (paragraph markings) to HotpotQA input paragraphs.
+Here, you can see how to answer subquestions (from [ONUS](https://arxiv.org/abs/2002.09758)) with a pretrained SQuAD (as we did) and add the subanswers (paragraph markings) to HotpotQA input paragraphs.
 These instructions are useful if you have your own subquestions that you'd like to test.
-First, setup the Unsupervised Question Decomposition [repo](https://github.com/facebookresearch/UnsupervisedDecomposition), cloning the repo 
-into `$BASE_DIR/`, e.g.:
+First, setup the Unsupervised Question Decomposition [repo](https://github.com/facebookresearch/UnsupervisedDecomposition), cloning the repo into `$BASE_DIR/`, e.g.:
 ```bash
 git clone
 cd UnsupervisedDecomposition
 export MAIN_DIR=$PWD
-# Setup conda environment and download data and pretrained models according the instructions in 
-https://github.com/facebookresearch/UnsupervisedDecomposition
+# Setup conda environment and download data and pretrained models according the instructions in https://github.com/facebookresearch/UnsupervisedDecomposition
 ```
 
 Next, activate the virtual environment for that repo and then answer subquestions for HotpotQA training set as follows:
 ```bash
-MODEL_DIR=$MAIN_DIR/XLM/dumped/umt.dev1.pseudo_decomp.replace_entity_by_type/20639223  # ONUS decompositions path. To use other decompositions, 
-point this path to a folder containing other decompositions
+MODEL_DIR=$MAIN_DIR/XLM/dumped/umt.dev1.pseudo_decomp.replace_entity_by_type/20639223  # ONUS decompositions path. To use other decompositions, point this path to a folder containing other decompositions
 SPLIT="train"  # use "dev" to answer subquestions for dev set (not necessary for RDA experiments)
 ST=0.0
 LP=1.0
@@ -442,26 +401,17 @@ cd $MAIN_DIR/pytorch-transformers
 
 # Convert Sub-Qs to SQUAD format
 if [ $SPLIT == "dev" ]; then SUBQS_SPLIT="valid"; else SUBQS_SPLIT="$SPLIT"; fi
-python umt_gen_subqs_to_squad_format.py --model_dir $MODEL_DIR --data_folder all --sample_temperature $ST --beam $BEAM --length_penalty $LP 
---seed $SEED --split $SUBQS_SPLIT --new_data_format
+python umt_gen_subqs_to_squad_format.py --model_dir $MODEL_DIR --data_folder all --sample_temperature $ST --beam $BEAM --length_penalty $LP --seed $SEED --split $SUBQS_SPLIT --new_data_format
 
 for NUM_PARAGRAPHS in 1 3; do
-    python examples/run_squad.py --model_type roberta --model_name_or_path roberta-large --train_file $DATA_FOLDER/train.json --predict_file 
-$DATA_FOLDER/$SPLIT.json --do_eval --do_lower_case --version_2_with_negative --output_dir 
-checkpoint/roberta_large.hotpot_easy_and_squad.num_paragraphs=$NUM_PARAGRAPHS --per_gpu_train_batch_size 64 --per_gpu_eval_batch_size 32 
---learning_rate 1.5e-5 --max_query_length 234 --max_seq_length 512 --doc_stride 50 --num_shards 1 --seed 0 --max_grad_norm inf --adam_epsilon 
-1e-6 --adam_beta_2 0.98 --weight_decay 0.01 --warmup_proportion 0.06 --num_train_epochs 2 --write_dir 
-$DATA_FOLDER/roberta_predict.np=$NUM_PARAGRAPHS --no_answer_file
+    python examples/run_squad.py --model_type roberta --model_name_or_path roberta-large --train_file $DATA_FOLDER/train.json --predict_file $DATA_FOLDER/$SPLIT.json --do_eval --do_lower_case --version_2_with_negative --output_dir checkpoint/roberta_large.hotpot_easy_and_squad.num_paragraphs=$NUM_PARAGRAPHS --per_gpu_train_batch_size 64 --per_gpu_eval_batch_size 32 --learning_rate 1.5e-5 --max_query_length 234 --max_seq_length 512 --doc_stride 50 --num_shards 1 --seed 0 --max_grad_norm inf --adam_epsilon 1e-6 --adam_beta_2 0.98 --weight_decay 0.01 --warmup_proportion 0.06 --num_train_epochs 2 --write_dir $DATA_FOLDER/roberta_predict.np=$NUM_PARAGRAPHS --no_answer_file
 done
 
 # Ensemble sub-answer predictions
-python ensemble_answers_by_confidence_script.py --seeds_list 1 3 --no_answer_file --split $SPLIT --preds_file1 
-data/hotpot.umt.all.model=$MODEL_NO.st=$ST.beam=$BEAM.lp=$LP.seed=$SEED/roberta_predict.np={}/nbest_predictions_$SPLIT.json
+python ensemble_answers_by_confidence_script.py --seeds_list 1 3 --no_answer_file --split $SPLIT --preds_file1 data/hotpot.umt.all.model=$MODEL_NO.st=$ST.beam=$BEAM.lp=$LP.seed=$SEED/roberta_predict.np={}/nbest_predictions_$SPLIT.json
 
 # Add sub-questions and sub-answers to QA input
-python add_umt_subqs_subas_to_q_squad_format_new.py --subqs_dir data/hotpot.umt.all.model=$MODEL_NO.st=$ST.beam=$BEAM.lp=$LP.seed=$SEED 
---splits $SPLIT --num_shards 1 --model_dir $MODEL_DIR --sample_temperature $ST --beam $BEAM --length_penalty $LP --seed $SEED --use_easy 
---use_squad "--atype sentence-1-center --subq_model roberta-large-np=1-3 --use_q --use_suba --use_subq"
+python add_umt_subqs_subas_to_q_squad_format_new.py --subqs_dir data/hotpot.umt.all.model=$MODEL_NO.st=$ST.beam=$BEAM.lp=$LP.seed=$SEED --splits $SPLIT --num_shards 1 --model_dir $MODEL_DIR --sample_temperature $ST --beam $BEAM --length_penalty $LP --seed $SEED --use_easy --use_squad "--atype sentence-1-center --subq_model roberta-large-np=1-3 --use_q --use_suba --use_subq"
 
 # Find paragraphs containing sub-answers
 python $BASE_DIR/scripts/hotpot.eval_supporting_fact_retrieval.py --model_no $MODEL_NO --num_paragraphs_str "1-3" --split $SPLIT
@@ -474,10 +424,8 @@ python $BASE_DIR/scripts/hotpot.format_data.py --model_no $MODEL_NO --split $SPL
 ### Distilled Language Model Decompositions
 
 Here, we include details on how to train a Distilled Language Model (DLM).
-You'll need to include your own language model decompositions for training data, where each input example is formatted on a new line and each 
-output is on a new line (with the same line number as the corresponding input).
-Put training inputs in a single directory, `DATA_DIR`, containing a file with name `train.source` that contains training inputs and 
-`train.target` that contains training outputs/targets.
+You'll need to include your own language model decompositions for training data, where each input example is formatted on a new line and each output is on a new line (with the same line number as the corresponding input).
+Put training inputs in a single directory, `DATA_DIR`, containing a file with name `train.source` that contains training inputs and `train.target` that contains training outputs/targets.
 Likewise, do the same for validation examples (`val.source` and `val.target`) and test examples (`test.source` and `test.target`).
 
 To train DLM, clone my version of HuggingFace Transformers 4.0 (located [here](https://github.com/ethanjperez/distilled-lm)), e.g.:
@@ -502,10 +450,7 @@ OUTPUT_DIR="$BASE_DIR/checkpoint/dlm"
 mkdir -p $OUTPUT_DIR
 DATA_DIR="/path/to/decompositions"  # TODO: Set the data directory containing decompositions you'd like to train on
 # Train DLM model
-python finetune.py --data_dir=$DATA_DIR --learning_rate=1e-4 --train_batch_size=$TBS --eval_batch_size=$((2*TBS/EB)) --output_dir=$OUTPUT_DIR 
---max_source_length=$MSL --max_target_length=$MSL --n_val=-1 --do_train --do_predict --model_name_or_path "t5-3b" --adafactor --gpus 1 
---gradient_accumulation_steps $GAS --num_workers $CPUS --val_check_interval=1.0 --warmup_steps 0 --max_grad_norm inf --task translation 
---val_metric bleu --early_stopping_patience 1 --eval_beams $EB --label_smoothing 0.1 --num_train_epochs 3
+python finetune.py --data_dir=$DATA_DIR --learning_rate=1e-4 --train_batch_size=$TBS --eval_batch_size=$((2*TBS/EB)) --output_dir=$OUTPUT_DIR --max_source_length=$MSL --max_target_length=$MSL --n_val=-1 --do_train --do_predict --model_name_or_path "t5-3b" --adafactor --gpus 1 --gradient_accumulation_steps $GAS --num_workers $CPUS --val_check_interval=1.0 --warmup_steps 0 --max_grad_norm inf --task translation --val_metric bleu --early_stopping_patience 1 --eval_beams $EB --label_smoothing 0.1 --num_train_epochs 3
 ```
 
 Then, set the `QUESTIONS_PATH` variable to a file containing (line-by-line) the questions you'd like to decompose.
@@ -514,8 +459,7 @@ You can then generate decompositions with the trained DLM as follows:
 ```bash
 QUESTIONS_PATH="/path/to/questions/to/be/decomposed.txt"
 GENERATION_OUTPUT_PATH="/path/to/decomposed/questions.txt"
-python run_eval.py "$OUTPUT_DIR/best_tfmr" "$QUESTIONS_PATH" "$GENERATION_OUTPUT_PATH" --reference_path "$QUESTIONS_PATH" --task translation 
---bs 8 --num_beams 4 --length_penalty 0.6 --early_stopping true
+python run_eval.py "$OUTPUT_DIR/best_tfmr" "$QUESTIONS_PATH" "$GENERATION_OUTPUT_PATH" --reference_path "$QUESTIONS_PATH" --task translation --bs 8 --num_beams 4 --length_penalty 0.6 --early_stopping true
 ```
 
 We then apply some postprocessing (to remove excess punctuation) and lowercasing (to match how the ) to generated question decompositions:
@@ -529,8 +473,7 @@ Then, you can follow the instructions from earlier/above to answer subquestions 
 ## RDA on CLEVR
 
 Install CUDA to run on GPU. We used CUDA 9.2 with GCC 6.3.0, but other versions should work as well.
-Then, setup a Python 3.7+ virtual environment. We [installed Anaconda 3](https://docs.anaconda.com/anaconda/install/) and created a Python 3.7 
-conda environment:
+Then, setup a Python 3.7+ virtual environment. We [installed Anaconda 3](https://docs.anaconda.com/anaconda/install/) and created a Python 3.7 conda environment:
 ```bash
 conda create -n film python=3.7
 conda activate film
@@ -544,10 +487,8 @@ cd $BASE_DIR/transformers
 pip install --editable .
 ```
 
-Next, follow the data download and preprocessing instructions [here](https://github.com/facebookresearch/clevr-iep/blob/master/TRAINING.md) to 
-save the data into `data/CLEVR_v1.0`.
-This process takes some time, because there are a large number of image files to unzip and extract features for using a pretrained ImageNet 
-model.
+Next, follow the data download and preprocessing instructions [here](https://github.com/facebookresearch/clevr-iep/blob/master/TRAINING.md) to save the data into `data/CLEVR_v1.0`.
+This process takes some time, because there are a large number of image files to unzip and extract features for using a pretrained ImageNet model.
 
 Next, find the three subsets of CLEVR questions that we use in our paper and append answers to subquestions to the CLEVR question:
 ```bash
@@ -596,14 +537,10 @@ done
 done
 ```
 
-Each call to `scripts/train/num_train_samples.modified_questions.prequential.sh` trains a single FiLM model for a particular random seed 
-(`SEED`), task (with name `TN`, i.e., the question type), number of subanswers (`SAS`), and prequential block number (`PBN` indicates training 
-on all blocks of data up to and including block number `PBN`).
-Running the above will take a while on a single GPU, so you'll probably want to change the for loop as needed (e.g., just use one random seed 
-or one task) or parallelize the above training runs by running each as a separate job on a cluster.
+Each call to `scripts/train/num_train_samples.modified_questions.prequential.sh` trains a single FiLM model for a particular random seed (`SEED`), task (with name `TN`, i.e., the question type), number of subanswers (`SAS`), and prequential block number (`PBN` indicates training on all blocks of data up to and including block number `PBN`).
+Running the above will take a while on a single GPU, so you'll probably want to change the for loop as needed (e.g., just use one random seed or one task) or parallelize the above training runs by running each as a separate job on a cluster.
 
-Finally, compute MDL and save plots to `$BASE_DIR/scripts/plots` by deactivating your current environment, activating the `rda` environment for 
-non-CLEVR experiments, and then running:
+Finally, compute MDL and save plots to `$BASE_DIR/scripts/plots` by deactivating your current environment, activating the `rda` environment for non-CLEVR experiments, and then running:
 ```bash
 python scripts/plot_results.py --exp clevr
 ```
@@ -614,8 +551,7 @@ TN="clevr-compare_integer"  # in {clevr-compare_integer,clevr-comparison,clevr-s
 python scripts/plot_results.py --exp clevr --task_types $TN
 ```
 
-*Note*: Please install any missing packages you encounter along the way above using `pip install [dependency]` (e.g., if you encounter 
-`ModuleNotFoundError: No module named [dependency]`).
+*Note*: Please install any missing packages you encounter along the way above using `pip install [dependency]` (e.g., if you encounter `ModuleNotFoundError: No module named [dependency]`).
 
 ## Other Scripts
 
@@ -638,4 +574,3 @@ python $BASE_DIR/scripts/glue.compute_entropy.py
   year = {2021}
 }
 ```
-
