@@ -1,0 +1,1058 @@
+word,gender,syncategory,source,code,code2,Adina's Notes
+supervisor,M,noun,WinoBias (US Dept. Labor),,,
+janitor,M,noun,WinoBias (US Dept. Labor),,,
+cook,M,noun,WinoBias (US Dept. Labor),,,
+mover,M,noun,WinoBias (US Dept. Labor),,,
+laborer,M,noun,WinoBias (US Dept. Labor),,,
+constructor,M,noun,WinoBias (US Dept. Labor),,,
+chief,M,noun,WinoBias (US Dept. Labor),,,
+developer,M,noun,WinoBias (US Dept. Labor),,,
+carpeter,M,noun,WinoBias (US Dept. Labor),,,
+manager,M,noun,WinoBias (US Dept. Labor),,,
+lawyer,M,noun,WinoBias (US Dept. Labor),,,
+farmer,M,noun,WinoBias (US Dept. Labor),,,
+driver,M,noun,WinoBias (US Dept. Labor),,,
+salesperson,M,noun,WinoBias (US Dept. Labor),,,
+physician,M,noun,WinoBias (US Dept. Labor),,,
+guard,M,noun,WinoBias (US Dept. Labor),,,
+analyst,M,noun,WinoBias (US Dept. Labor),,,
+mechanician,M,noun,WinoBias (US Dept. Labor),,,
+sheriff,M,noun,WinoBias (US Dept. Labor),,,
+CEO,M,noun,WinoBias (US Dept. Labor),,,
+cashier,F,noun,WinoBias (US Dept. Labor),,,
+teacher,F,noun,WinoBias (US Dept. Labor),,,
+nurse,F,noun,WinoBias (US Dept. Labor),,,
+assistant,F,noun,WinoBias (US Dept. Labor),,,
+secretary,F,noun,WinoBias (US Dept. Labor),,,
+auditor,F,noun,WinoBias (US Dept. Labor),,,
+cleaner,F,noun,WinoBias (US Dept. Labor),,,
+receptionist,F,noun,WinoBias (US Dept. Labor),,,
+clerk,F,noun,WinoBias (US Dept. Labor),,,
+counselors,F,noun,WinoBias (US Dept. Labor),,,
+designer,F,noun,WinoBias (US Dept. Labor),,,
+hairdressers,F,noun,WinoBias (US Dept. Labor),,,
+attendant,F,noun,WinoBias (US Dept. Labor),,,
+writer,F,noun,WinoBias (US Dept. Labor),,,
+housekeeper,F,noun,WinoBias (US Dept. Labor),,,
+baker,F,noun,WinoBias (US Dept. Labor),,,
+accountant,F,noun,WinoBias (US Dept. Labor),,,
+editor,F,noun,WinoBias (US Dept. Labor),,,
+librarian,F,noun,WinoBias (US Dept. Labor),,,
+sewer,F,noun,WinoBias (US Dept. Labor),,,what
+just,M,adjective,https://arxiv.org/pdf/1906.04760.pdf,positive,,
+sound,M,adjective,https://arxiv.org/pdf/1906.04760.pdf,positive,,
+righteous,M,adjective,https://arxiv.org/pdf/1906.04760.pdf,positive,,
+rational,M,adjective,https://arxiv.org/pdf/1906.04760.pdf,positive,,
+peaceable,M,adjective,https://arxiv.org/pdf/1906.04760.pdf,positive,,
+prodigious,M,adjective,https://arxiv.org/pdf/1906.04760.pdf,positive,,
+brave,M,adjective,https://arxiv.org/pdf/1906.04760.pdf,positive,,
+paramount,M,adjective,https://arxiv.org/pdf/1906.04760.pdf,positive,,
+reliable,M,adjective,https://arxiv.org/pdf/1906.04760.pdf,positive,,
+sinless,M,adjective,https://arxiv.org/pdf/1906.04760.pdf,positive,,
+unsuitable,M,adjective,https://arxiv.org/pdf/1906.04760.pdf,negative,,
+unreliable,M,adjective,https://arxiv.org/pdf/1906.04760.pdf,negative,,
+lawless,M,adjective,https://arxiv.org/pdf/1906.04760.pdf,negative,,
+inseparable,M,adjective,https://arxiv.org/pdf/1906.04760.pdf,negative,,
+brutish,M,adjective,https://arxiv.org/pdf/1906.04760.pdf,negative,,
+idle,M,adjective,https://arxiv.org/pdf/1906.04760.pdf,negative,,
+unarmed,M,adjective,https://arxiv.org/pdf/1906.04760.pdf,negative,,
+wounded,M,adjective,https://arxiv.org/pdf/1906.04760.pdf,negative,,
+bigoted,M,adjective,https://arxiv.org/pdf/1906.04760.pdf,negative,,
+unjust,M,adjective,https://arxiv.org/pdf/1906.04760.pdf,negative,,
+brutal,M,adjective,https://arxiv.org/pdf/1906.04760.pdf,negative,,
+beautiful,F,adjective,https://arxiv.org/pdf/1906.04760.pdf,positive,,
+lovely,F,adjective,https://arxiv.org/pdf/1906.04760.pdf,positive,,
+chaste,F,adjective,https://arxiv.org/pdf/1906.04760.pdf,positive,,
+gorgeous,F,adjective,https://arxiv.org/pdf/1906.04760.pdf,positive,,
+fertile,F,adjective,https://arxiv.org/pdf/1906.04760.pdf,positive,,
+beauteous,F,adjective,https://arxiv.org/pdf/1906.04760.pdf,positive,,
+sexy,F,adjective,https://arxiv.org/pdf/1906.04760.pdf,positive,,
+classy,F,adjective,https://arxiv.org/pdf/1906.04760.pdf,positive,,
+exquisite,F,adjective,https://arxiv.org/pdf/1906.04760.pdf,positive,,
+vivacious,F,adjective,https://arxiv.org/pdf/1906.04760.pdf,positive,,
+vibrant,F,adjective,https://arxiv.org/pdf/1906.04760.pdf,positive,,
+battered,F,adjective,https://arxiv.org/pdf/1906.04760.pdf,negative,,
+untreated,F,adjective,https://arxiv.org/pdf/1906.04760.pdf,negative,,
+barren,F,adjective,https://arxiv.org/pdf/1906.04760.pdf,negative,,
+shrewish,F,adjective,https://arxiv.org/pdf/1906.04760.pdf,negative,,
+sheltered,F,adjective,https://arxiv.org/pdf/1906.04760.pdf,negative,,
+heartbroken,F,adjective,https://arxiv.org/pdf/1906.04760.pdf,negative,,
+unmarried,F,adjective,https://arxiv.org/pdf/1906.04760.pdf,negative,,
+undernourished,F,adjective,https://arxiv.org/pdf/1906.04760.pdf,negative,,
+underweight,F,adjective,https://arxiv.org/pdf/1906.04760.pdf,negative,,
+uncomplaining,F,adjective,https://arxiv.org/pdf/1906.04760.pdf,negative,,
+nagging,F,adjective,https://arxiv.org/pdf/1906.04760.pdf,negative,,
+faithful,M,adjective,https://arxiv.org/pdf/1906.04760.pdf,positive,,
+responsible,M,adjective,https://arxiv.org/pdf/1906.04760.pdf,positive,,
+adventurous,M,adjective,https://arxiv.org/pdf/1906.04760.pdf,positive,,
+grand,M,adjective,https://arxiv.org/pdf/1906.04760.pdf,positive,,
+worthy,M,adjective,https://arxiv.org/pdf/1906.04760.pdf,positive,,
+good,M,adjective,https://arxiv.org/pdf/1906.04760.pdf,positive,,
+normal,M,adjective,https://arxiv.org/pdf/1906.04760.pdf,positive,,
+ambitious,M,adjective,https://arxiv.org/pdf/1906.04760.pdf,positive,,
+gallant,M,adjective,https://arxiv.org/pdf/1906.04760.pdf,positive,,
+mighty,M,adjective,https://arxiv.org/pdf/1906.04760.pdf,positive,,
+loyal,M,adjective,https://arxiv.org/pdf/1906.04760.pdf,positive,,
+valiant,M,adjective,https://arxiv.org/pdf/1906.04760.pdf,positive,,
+courteous,M,adjective,https://arxiv.org/pdf/1906.04760.pdf,positive,,
+powerful,M,adjective,https://arxiv.org/pdf/1906.04760.pdf,positive,,
+supreme,M,adjective,https://arxiv.org/pdf/1906.04760.pdf,positive,,
+meritorious,M,adjective,https://arxiv.org/pdf/1906.04760.pdf,positive,,
+serene,M,adjective,https://arxiv.org/pdf/1906.04760.pdf,positive,,
+godlike,M,adjective,https://arxiv.org/pdf/1906.04760.pdf,positive,,
+noble,M,adjective,https://arxiv.org/pdf/1906.04760.pdf,positive,,
+rightful,M,adjective,https://arxiv.org/pdf/1906.04760.pdf,positive,,
+eager,M,adjective,https://arxiv.org/pdf/1906.04760.pdf,positive,,
+financial,M,adjective,https://arxiv.org/pdf/1906.04760.pdf,positive,,"neutral, positive, negative sentiment"
+chivalrous,M,adjective,https://arxiv.org/pdf/1906.04760.pdf,positive,,
+dumb,M,adjective,https://arxiv.org/pdf/1906.04760.pdf,negative,,
+violent,M,adjective,https://arxiv.org/pdf/1906.04760.pdf,negative,,
+weak,M,adjective,https://arxiv.org/pdf/1906.04760.pdf,negative,,
+evil,M,adjective,https://arxiv.org/pdf/1906.04760.pdf,negative,,
+stupid,M,adjective,https://arxiv.org/pdf/1906.04760.pdf,negative,,
+petty,M,adjective,https://arxiv.org/pdf/1906.04760.pdf,negative,,
+brutal,M,adjective,https://arxiv.org/pdf/1906.04760.pdf,negative,,
+wicked,M,adjective,https://arxiv.org/pdf/1906.04760.pdf,negative,,
+rebellious,M,adjective,https://arxiv.org/pdf/1906.04760.pdf,negative,,
+bad,M,adjective,https://arxiv.org/pdf/1906.04760.pdf,negative,,
+worthless,M,adjective,https://arxiv.org/pdf/1906.04760.pdf,negative,,
+hostile,M,adjective,https://arxiv.org/pdf/1906.04760.pdf,negative,,
+careless,M,adjective,https://arxiv.org/pdf/1906.04760.pdf,negative,,
+unsung,M,adjective,https://arxiv.org/pdf/1906.04760.pdf,negative,,
+abusive,M,adjective,https://arxiv.org/pdf/1906.04760.pdf,negative,,
+financial,M,adjective,https://arxiv.org/pdf/1906.04760.pdf,negative,,"neutral, positive, negative sentiment"
+feudal,M,adjective,https://arxiv.org/pdf/1906.04760.pdf,negative,,
+false ,M,adjective,https://arxiv.org/pdf/1906.04760.pdf,negative,,
+feeble,M,adjective,https://arxiv.org/pdf/1906.04760.pdf,negative,,
+impotent,M,adjective,https://arxiv.org/pdf/1906.04760.pdf,negative,,
+dishonest,M,adjective,https://arxiv.org/pdf/1906.04760.pdf,negative,,
+ungrateful,M,adjective,https://arxiv.org/pdf/1906.04760.pdf,negative,,
+unfaithful,M,adjective,https://arxiv.org/pdf/1906.04760.pdf,negative,,
+incompetent,M,adjective,https://arxiv.org/pdf/1906.04760.pdf,negative,,
+german,M,adjective,https://arxiv.org/pdf/1906.04760.pdf,neutral,,
+teutonic,M,adjective,https://arxiv.org/pdf/1906.04760.pdf,neutral,,
+financial,M,adjective,https://arxiv.org/pdf/1906.04760.pdf,neutral,,"neutral, positive, negative sentiment"
+feudal,M,adjective,https://arxiv.org/pdf/1906.04760.pdf,neutral,,negative and neutral
+later,M,adjective,https://arxiv.org/pdf/1906.04760.pdf,neutral,,
+austrian,M,adjective,https://arxiv.org/pdf/1906.04760.pdf,neutral,,
+feudatory,M,adjective,https://arxiv.org/pdf/1906.04760.pdf,neutral,,
+maternal,M,adjective,https://arxiv.org/pdf/1906.04760.pdf,neutral,,?
+bavarian,M,adjective,https://arxiv.org/pdf/1906.04760.pdf,neutral,,
+negro,M,adjective,https://arxiv.org/pdf/1906.04760.pdf,neutral,,yikes!
+paternal,M,adjective,https://arxiv.org/pdf/1906.04760.pdf,neutral,,
+frankish,M,adjective,https://arxiv.org/pdf/1906.04760.pdf,neutral,,
+welsh,M,adjective,https://arxiv.org/pdf/1906.04760.pdf,neutral,,
+ecclesiastical,M,adjective,https://arxiv.org/pdf/1906.04760.pdf,neutral,,
+rural,M,adjective,https://arxiv.org/pdf/1906.04760.pdf,neutral,,
+persian,M,adjective,https://arxiv.org/pdf/1906.04760.pdf,neutral,,
+belted,M,adjective,https://arxiv.org/pdf/1906.04760.pdf,neutral,,
+swiss,M,adjective,https://arxiv.org/pdf/1906.04760.pdf,neutral,,
+finnish,M,adjective,https://arxiv.org/pdf/1906.04760.pdf,neutral,,
+national ,M,adjective,https://arxiv.org/pdf/1906.04760.pdf,neutral,,
+priestly,M,adjective,https://arxiv.org/pdf/1906.04760.pdf,neutral,,
+merovingian,M,adjective,https://arxiv.org/pdf/1906.04760.pdf,neutral,,
+carpetian,M,adjective,https://arxiv.org/pdf/1906.04760.pdf,neutral,,
+prussian,M,adjective,https://arxiv.org/pdf/1906.04760.pdf,neutral,,
+racial,M,adjective,https://arxiv.org/pdf/1906.04760.pdf,neutral,,yikes
+pretty,F,adjective,https://arxiv.org/pdf/1906.04760.pdf,positive,,
+fair,F,adjective,https://arxiv.org/pdf/1906.04760.pdf,positive,,
+charming,F,adjective,https://arxiv.org/pdf/1906.04760.pdf,positive,,
+sweet,F,adjective,https://arxiv.org/pdf/1906.04760.pdf,positive,,
+grand,F,adjective,https://arxiv.org/pdf/1906.04760.pdf,positive,,
+stately,F,adjective,https://arxiv.org/pdf/1906.04760.pdf,positive,,
+attractive,F,adjective,https://arxiv.org/pdf/1906.04760.pdf,positive,,
+chaste,F,adjective,https://arxiv.org/pdf/1906.04760.pdf,positive,,
+virtuous,F,adjective,https://arxiv.org/pdf/1906.04760.pdf,positive,,
+delightful,F,adjective,https://arxiv.org/pdf/1906.04760.pdf,positive,,
+gentle,F,adjective,https://arxiv.org/pdf/1906.04760.pdf,positive,,
+privileged,F,adjective,https://arxiv.org/pdf/1906.04760.pdf,positive,,
+romantic,F,adjective,https://arxiv.org/pdf/1906.04760.pdf,positive,,
+enchanted,F,adjective,https://arxiv.org/pdf/1906.04760.pdf,positive,,
+kindly,F,adjective,https://arxiv.org/pdf/1906.04760.pdf,positive,,
+elegant,F,adjective,https://arxiv.org/pdf/1906.04760.pdf,positive,,
+dear,F,adjective,https://arxiv.org/pdf/1906.04760.pdf,positive,,
+devoted,F,adjective,https://arxiv.org/pdf/1906.04760.pdf,positive,,
+sprightly,F,adjective,https://arxiv.org/pdf/1906.04760.pdf,positive,,
+beloved,F,adjective,https://arxiv.org/pdf/1906.04760.pdf,positive,,
+peasant,F,adjective,https://arxiv.org/pdf/1906.04760.pdf,positive,,?
+horrible,F,adjective,https://arxiv.org/pdf/1906.04760.pdf,negative,,
+destructive,F,adjective,https://arxiv.org/pdf/1906.04760.pdf,negative,,
+notorious,F,adjective,https://arxiv.org/pdf/1906.04760.pdf,negative,,
+dreary,F,adjective,https://arxiv.org/pdf/1906.04760.pdf,negative,,
+ugly,F,adjective,https://arxiv.org/pdf/1906.04760.pdf,negative,,
+weird,F,adjective,https://arxiv.org/pdf/1906.04760.pdf,negative,,
+harried,F,adjective,https://arxiv.org/pdf/1906.04760.pdf,negative,,
+diabetic,F,adjective,https://arxiv.org/pdf/1906.04760.pdf,negative,,
+infected,F,adjective,https://arxiv.org/pdf/1906.04760.pdf,negative,,
+inmarried,F,adjective,https://arxiv.org/pdf/1906.04760.pdf,negative,,
+unequal,F,adjective,https://arxiv.org/pdf/1906.04760.pdf,negative,,
+widowed,F,adjective,https://arxiv.org/pdf/1906.04760.pdf,negative,,
+unhappy,F,adjective,https://arxiv.org/pdf/1906.04760.pdf,negative,,
+horrid,F,adjective,https://arxiv.org/pdf/1906.04760.pdf,negative,,
+pitiful,F,adjective,https://arxiv.org/pdf/1906.04760.pdf,negative,,
+frightful,F,adjective,https://arxiv.org/pdf/1906.04760.pdf,negative,,
+artificial,F,adjective,https://arxiv.org/pdf/1906.04760.pdf,negative,,
+sullen,F,adjective,https://arxiv.org/pdf/1906.04760.pdf,negative,,
+hysterical,F,adjective,https://arxiv.org/pdf/1906.04760.pdf,negative,,
+awful,F,adjective,https://arxiv.org/pdf/1906.04760.pdf,negative,,
+haughty,F,adjective,https://arxiv.org/pdf/1906.04760.pdf,negative,,
+terrible,F,adjective,https://arxiv.org/pdf/1906.04760.pdf,negative,,
+damned,F,adjective,https://arxiv.org/pdf/1906.04760.pdf,negative,,
+topless,F,adjective,https://arxiv.org/pdf/1906.04760.pdf,negative,,yikes
+virgin,F,adjective,https://arxiv.org/pdf/1906.04760.pdf,neutral,,
+alleged,F,adjective,https://arxiv.org/pdf/1906.04760.pdf,neutral,,
+maiden,F,adjective,https://arxiv.org/pdf/1906.04760.pdf,neutral,,
+russian,F,adjective,https://arxiv.org/pdf/1906.04760.pdf,neutral,,
+widowed,F,adjective,https://arxiv.org/pdf/1906.04760.pdf,neutral,,negative and neutral
+grand,F,adjective,https://arxiv.org/pdf/1906.04760.pdf,neutral,,positive and neutral
+byzantine,F,adjective,https://arxiv.org/pdf/1906.04760.pdf,neutral,,
+fashionable,F,adjective,https://arxiv.org/pdf/1906.04760.pdf,neutral,,
+topless,F,adjective,https://arxiv.org/pdf/1906.04760.pdf,neutral,,neutral and negative
+weathered,F,adjective,https://arxiv.org/pdf/1906.04760.pdf,neutral,,
+colonial,F,adjective,https://arxiv.org/pdf/1906.04760.pdf,neutral,,
+diabetic,F,adjective,https://arxiv.org/pdf/1906.04760.pdf,neutral,,
+burlesque,F,adjective,https://arxiv.org/pdf/1906.04760.pdf,neutral,,
+blonde,F,adjective,https://arxiv.org/pdf/1906.04760.pdf,neutral,,
+parisian,F,adjective,https://arxiv.org/pdf/1906.04760.pdf,neutral,,
+clad,F,adjective,https://arxiv.org/pdf/1906.04760.pdf,neutral,,
+female,F,adjective,https://arxiv.org/pdf/1906.04760.pdf,neutral,,no way lol
+oriental,F,adjective,https://arxiv.org/pdf/1906.04760.pdf,neutral,,
+ancient,F,adjective,https://arxiv.org/pdf/1906.04760.pdf,neutral,,
+feminist,F,adjective,https://arxiv.org/pdf/1906.04760.pdf,neutral,,
+matronly,F,adjective,https://arxiv.org/pdf/1906.04760.pdf,neutral,,
+pretty,F,adjective,https://arxiv.org/pdf/1906.04760.pdf,neutral,,good and neutral
+asiatic,F,adjective,https://arxiv.org/pdf/1906.04760.pdf,neutral,,
+daughter,F,noun,https://arxiv.org/pdf/1906.04760.pdf,,,kinship
+lady,F,noun,https://arxiv.org/pdf/1906.04760.pdf,,,kinship
+wife,F,noun,https://arxiv.org/pdf/1906.04760.pdf,,,kinship
+mother,F,noun,https://arxiv.org/pdf/1906.04760.pdf,,,kinship
+girl,F,noun,https://arxiv.org/pdf/1906.04760.pdf,,,kinship
+woman,F,noun,https://arxiv.org/pdf/1906.04760.pdf,,,kinship
+husband,M,noun,https://arxiv.org/pdf/1906.04760.pdf,,,kinship
+king,M,noun,https://arxiv.org/pdf/1906.04760.pdf,,,kinship
+son,M,noun,https://arxiv.org/pdf/1906.04760.pdf,,,kinship
+father,M,noun,https://arxiv.org/pdf/1906.04760.pdf,,,kinship
+boy ,M,noun,https://arxiv.org/pdf/1906.04760.pdf,,,kinship
+man,M,noun,https://arxiv.org/pdf/1906.04760.pdf,,,kinship
+brother,M,noun,https://arxiv.org/pdf/1906.04760.pdf,,,kinship
+uncle,M,noun,https://arxiv.org/pdf/1906.04760.pdf,,,kinship
+nephew,M,noun,https://arxiv.org/pdf/1906.04760.pdf,,,kinship
+emperor,M,noun,https://arxiv.org/pdf/1906.04760.pdf,,,
+king,M,noun,https://arxiv.org/pdf/1906.04760.pdf,,,
+prince,M,noun,https://arxiv.org/pdf/1906.04760.pdf,,,
+duke,M,noun,https://arxiv.org/pdf/1906.04760.pdf,,,
+lord,M,noun,https://arxiv.org/pdf/1906.04760.pdf,,,
+knight,M,noun,https://arxiv.org/pdf/1906.04760.pdf,,,Adina has qualms
+prince,M,noun,https://arxiv.org/pdf/1906.04760.pdf,,,
+duke,M,noun,https://arxiv.org/pdf/1906.04760.pdf,,,
+waiter,M,noun,https://arxiv.org/pdf/1906.04760.pdf,,,Adina has qualms
+actor,M,noun,https://arxiv.org/pdf/1906.04760.pdf,,,Adina has qualms
+godlike,M,noun,https://arxiv.org/pdf/1906.04760.pdf,,,
+policeman,M,noun,https://arxiv.org/pdf/1906.04760.pdf,,,Adina has qualms
+postman,M,noun,https://arxiv.org/pdf/1906.04760.pdf,,,Adina has qualms
+hero,M,noun,https://arxiv.org/pdf/1906.04760.pdf,,,Adina has qualms
+wizard,M,noun,https://arxiv.org/pdf/1906.04760.pdf,,,Adina has qualms
+steward,M,noun,https://arxiv.org/pdf/1906.04760.pdf,,,
+he,M,noun,https://arxiv.org/pdf/1906.04760.pdf,,,pronoun
+sister,F,noun,https://arxiv.org/pdf/1906.04760.pdf,,,kinship
+aunt,F,noun,https://arxiv.org/pdf/1906.04760.pdf,,,kinship
+niece,F,noun,https://arxiv.org/pdf/1906.04760.pdf,,,kinship
+empress,F,noun,https://arxiv.org/pdf/1906.04760.pdf,,,
+queen,F,noun,https://arxiv.org/pdf/1906.04760.pdf,,,
+princess,F,noun,https://arxiv.org/pdf/1906.04760.pdf,,,Adina has qualms
+dutchess,F,noun,https://arxiv.org/pdf/1906.04760.pdf,,,
+dame,F,noun,https://arxiv.org/pdf/1906.04760.pdf,,,
+waitress,F,noun,https://arxiv.org/pdf/1906.04760.pdf,,,Adina has qualms
+actress,F,noun,https://arxiv.org/pdf/1906.04760.pdf,,,Adina has qualms
+goddess,F,noun,https://arxiv.org/pdf/1906.04760.pdf,,,Adina has qualms
+policewoman,F,noun,https://arxiv.org/pdf/1906.04760.pdf,,,Adina has qualms
+postwoman,F,noun,https://arxiv.org/pdf/1906.04760.pdf,,,Adina has qualms
+heroine,F,noun,https://arxiv.org/pdf/1906.04760.pdf,,,Adina has qualms
+witch,F,noun,https://arxiv.org/pdf/1906.04760.pdf,,,
+stewardess,F,noun,https://arxiv.org/pdf/1906.04760.pdf,,,Adina has qualms
+she,F,noun,https://arxiv.org/pdf/1906.04760.pdf,,,pronoun
+succeed,M,verb,https://arxiv.org/pdf/1906.04760.pdf,positive,NSubj-verb,
+protect,M,verb,https://arxiv.org/pdf/1906.04760.pdf,positive,NSubj-verb,
+favor,M,verb,https://arxiv.org/pdf/1906.04760.pdf,positive,NSubj-verb,
+flourish,M,verb,https://arxiv.org/pdf/1906.04760.pdf,positive,NSubj-verb,
+prosper,M,verb,https://arxiv.org/pdf/1906.04760.pdf,positive,NSubj-verb,
+support,M,verb,https://arxiv.org/pdf/1906.04760.pdf,positive,NSubj-verb,
+promise,M,verb,https://arxiv.org/pdf/1906.04760.pdf,positive,NSubj-verb,
+welcome,M,verb,https://arxiv.org/pdf/1906.04760.pdf,positive,NSubj-verb,
+favour,M,verb,https://arxiv.org/pdf/1906.04760.pdf,positive,NSubj-verb,
+clear,M,verb,https://arxiv.org/pdf/1906.04760.pdf,positive,NSubj-verb,
+reward,M,verb,https://arxiv.org/pdf/1906.04760.pdf,positive,NSubj-verb,
+appeal,M,verb,https://arxiv.org/pdf/1906.04760.pdf,positive,NSubj-verb,
+encourage,M,verb,https://arxiv.org/pdf/1906.04760.pdf,positive,NSubj-verb,
+allow,M,verb,https://arxiv.org/pdf/1906.04760.pdf,positive,NSubj-verb,
+respect,M,verb,https://arxiv.org/pdf/1906.04760.pdf,positive,NSubj-verb,
+comfort,M,verb,https://arxiv.org/pdf/1906.04760.pdf,positive,NSubj-verb,
+treat,M,verb,https://arxiv.org/pdf/1906.04760.pdf,positive,NSubj-verb,
+brave,M,verb,https://arxiv.org/pdf/1906.04760.pdf,positive,NSubj-verb,
+rescue,M,verb,https://arxiv.org/pdf/1906.04760.pdf,positive,NSubj-verb,
+win,M,verb,https://arxiv.org/pdf/1906.04760.pdf,positive,NSubj-verb,
+warm,M,verb,https://arxiv.org/pdf/1906.04760.pdf,positive,NSubj-verb,
+praise,M,verb,https://arxiv.org/pdf/1906.04760.pdf,positive,NSubj-verb,
+fit,M,verb,https://arxiv.org/pdf/1906.04760.pdf,positive,NSubj-verb,
+wish ,M,verb,https://arxiv.org/pdf/1906.04760.pdf,positive,NSubj-verb,
+grant,M,verb,https://arxiv.org/pdf/1906.04760.pdf,positive,NSubj-verb,
+fight,M,verb,https://arxiv.org/pdf/1906.04760.pdf,negative,NSubj-verb,
+fail,M,verb,https://arxiv.org/pdf/1906.04760.pdf,negative,NSubj-verb,
+fear,M,verb,https://arxiv.org/pdf/1906.04760.pdf,negative,NSubj-verb,
+murder,M,verb,https://arxiv.org/pdf/1906.04760.pdf,negative,NSubj-verb,
+shock,M,verb,https://arxiv.org/pdf/1906.04760.pdf,negative,NSubj-verb,
+blind,M,verb,https://arxiv.org/pdf/1906.04760.pdf,negative,NSubj-verb,
+forbid,M,verb,https://arxiv.org/pdf/1906.04760.pdf,negative,NSubj-verb,
+kill,M,verb,https://arxiv.org/pdf/1906.04760.pdf,negative,NSubj-verb,
+protest,M,verb,https://arxiv.org/pdf/1906.04760.pdf,negative,NSubj-verb,
+cheat,M,verb,https://arxiv.org/pdf/1906.04760.pdf,negative,NSubj-verb,
+fake,M,verb,https://arxiv.org/pdf/1906.04760.pdf,negative,NSubj-verb,
+deprive,M,verb,https://arxiv.org/pdf/1906.04760.pdf,negative,NSubj-verb,
+threaten,M,verb,https://arxiv.org/pdf/1906.04760.pdf,negative,NSubj-verb,
+frustrate,M,verb,https://arxiv.org/pdf/1906.04760.pdf,negative,NSubj-verb,
+fright,M,verb,https://arxiv.org/pdf/1906.04760.pdf,negative,NSubj-verb,
+temper,M,verb,https://arxiv.org/pdf/1906.04760.pdf,negative,NSubj-verb,
+horrify,M,verb,https://arxiv.org/pdf/1906.04760.pdf,negative,NSubj-verb,
+neglect,M,verb,https://arxiv.org/pdf/1906.04760.pdf,negative,NSubj-verb,
+argue,M,verb,https://arxiv.org/pdf/1906.04760.pdf,negative,NSubj-verb,
+denounce,M,verb,https://arxiv.org/pdf/1906.04760.pdf,negative,NSubj-verb,
+concern,M,verb,https://arxiv.org/pdf/1906.04760.pdf,negative,NSubj-verb,
+expel,M,verb,https://arxiv.org/pdf/1906.04760.pdf,negative,NSubj-verb,
+dispute,M,verb,https://arxiv.org/pdf/1906.04760.pdf,negative,NSubj-verb,
+obscure,M,verb,https://arxiv.org/pdf/1906.04760.pdf,negative,NSubj-verb,
+damn,M,verb,https://arxiv.org/pdf/1906.04760.pdf,negative,NSubj-verb,
+extend,M,verb,https://arxiv.org/pdf/1906.04760.pdf,neutral,NSubj-verb,
+found,M,verb,https://arxiv.org/pdf/1906.04760.pdf,neutral,NSubj-verb,
+strike,M,verb,https://arxiv.org/pdf/1906.04760.pdf,neutral,NSubj-verb,
+own,M,verb,https://arxiv.org/pdf/1906.04760.pdf,neutral,NSubj-verb,
+collect,M,verb,https://arxiv.org/pdf/1906.04760.pdf,neutral,NSubj-verb,
+set,M,verb,https://arxiv.org/pdf/1906.04760.pdf,neutral,NSubj-verb,
+wag,M,verb,https://arxiv.org/pdf/1906.04760.pdf,neutral,NSubj-verb,
+present,M,verb,https://arxiv.org/pdf/1906.04760.pdf,neutral,,
+pretend,M,verb,https://arxiv.org/pdf/1906.04760.pdf,neutral,NSubj-verb,
+prostrate,M,verb,https://arxiv.org/pdf/1906.04760.pdf,neutral,NSubj-verb,
+want,M,verb,https://arxiv.org/pdf/1906.04760.pdf,neutral,NSubj-verb,
+create,M,verb,https://arxiv.org/pdf/1906.04760.pdf,neutral,NSubj-verb,
+pay,M,verb,https://arxiv.org/pdf/1906.04760.pdf,neutral,NSubj-verb,
+prompt,M,verb,https://arxiv.org/pdf/1906.04760.pdf,neutral,NSubj-verb,
+brazen,M,verb,https://arxiv.org/pdf/1906.04760.pdf,neutral,NSubj-verb,"""verb"""
+tarry,M,verb,https://arxiv.org/pdf/1906.04760.pdf,neutral,NSubj-verb,
+front,M,verb,https://arxiv.org/pdf/1906.04760.pdf,neutral,NSubj-verb,
+flush,M,verb,https://arxiv.org/pdf/1906.04760.pdf,neutral,NSubj-verb,
+reach,M,verb,https://arxiv.org/pdf/1906.04760.pdf,neutral,NSubj-verb,
+escape,M,verb,https://arxiv.org/pdf/1906.04760.pdf,neutral,NSubj-verb,
+gi,M,verb,https://arxiv.org/pdf/1906.04760.pdf,neutral,NSubj-verb,"""verb"""
+rush,M,verb,https://arxiv.org/pdf/1906.04760.pdf,neutral,NSubj-verb,
+duplicate,M,verb,https://arxiv.org/pdf/1906.04760.pdf,neutral,NSubj-verb,
+incarnate,M,verb,https://arxiv.org/pdf/1906.04760.pdf,neutral,NSubj-verb,
+freeze,M,verb,https://arxiv.org/pdf/1906.04760.pdf,neutral,NSubj-verb,
+celebrate,F,verb,https://arxiv.org/pdf/1906.04760.pdf,positive,NSubj-verb,
+fascinate,F,verb,https://arxiv.org/pdf/1906.04760.pdf,positive,NSubj-verb,
+facilitate,F,verb,https://arxiv.org/pdf/1906.04760.pdf,positive,NSubj-verb,
+marry,F,verb,https://arxiv.org/pdf/1906.04760.pdf,positive,NSubj-verb,
+smile,F,verb,https://arxiv.org/pdf/1906.04760.pdf,positive,NSubj-verb,
+fan,F,verb,https://arxiv.org/pdf/1906.04760.pdf,positive,NSubj-verb,
+kiss,F,verb,https://arxiv.org/pdf/1906.04760.pdf,positive,NSubj-verb,
+champion,F,verb,https://arxiv.org/pdf/1906.04760.pdf,positive,NSubj-verb,
+adore,F,verb,https://arxiv.org/pdf/1906.04760.pdf,positive,NSubj-verb,
+dance,F,verb,https://arxiv.org/pdf/1906.04760.pdf,positive,NSubj-verb,
+laugh,F,verb,https://arxiv.org/pdf/1906.04760.pdf,positive,NSubj-verb,
+have,F,verb,https://arxiv.org/pdf/1906.04760.pdf,positive,NSubj-verb,
+play,F,verb,https://arxiv.org/pdf/1906.04760.pdf,positive,NSubj-verb,
+give,F,verb,https://arxiv.org/pdf/1906.04760.pdf,positive,NSubj-verb,
+like,F,verb,https://arxiv.org/pdf/1906.04760.pdf,positive,NSubj-verb,
+giggle,F,verb,https://arxiv.org/pdf/1906.04760.pdf,positive,NSubj-verb,
+extol,F,verb,https://arxiv.org/pdf/1906.04760.pdf,positive,NSubj-verb,
+compassionate,F,verb,https://arxiv.org/pdf/1906.04760.pdf,positive,NSubj-verb,"""verb"""
+live,F,verb,https://arxiv.org/pdf/1906.04760.pdf,positive,NSubj-verb,
+freeze,F,verb,https://arxiv.org/pdf/1906.04760.pdf,positive,NSubj-verb,
+feliciate,F,verb,https://arxiv.org/pdf/1906.04760.pdf,positive,NSubj-verb,
+mature,F,verb,https://arxiv.org/pdf/1906.04760.pdf,positive,NSubj-verb,
+exalt,F,verb,https://arxiv.org/pdf/1906.04760.pdf,positive,NSubj-verb,
+surpass,F,verb,https://arxiv.org/pdf/1906.04760.pdf,positive,NSubj-verb,
+meet,F,verb,https://arxiv.org/pdf/1906.04760.pdf,positive,NSubj-verb,
+persecute,F,verb,https://arxiv.org/pdf/1906.04760.pdf,negative,NSubj-verb,
+faint,F,verb,https://arxiv.org/pdf/1906.04760.pdf,negative,NSubj-verb,
+fly,F,verb,https://arxiv.org/pdf/1906.04760.pdf,negative,NSubj-verb,
+weep,F,verb,https://arxiv.org/pdf/1906.04760.pdf,negative,NSubj-verb,
+harm,F,verb,https://arxiv.org/pdf/1906.04760.pdf,negative,NSubj-verb,
+wear,F,verb,https://arxiv.org/pdf/1906.04760.pdf,negative,NSubj-verb,
+mourn,F,verb,https://arxiv.org/pdf/1906.04760.pdf,negative,NSubj-verb,
+gasp,F,verb,https://arxiv.org/pdf/1906.04760.pdf,negative,NSubj-verb,
+fatigue,F,verb,https://arxiv.org/pdf/1906.04760.pdf,negative,NSubj-verb,
+scold,F,verb,https://arxiv.org/pdf/1906.04760.pdf,negative,NSubj-verb,
+scream,F,verb,https://arxiv.org/pdf/1906.04760.pdf,negative,NSubj-verb,
+confess,F,verb,https://arxiv.org/pdf/1906.04760.pdf,negative,NSubj-verb,
+get,F,verb,https://arxiv.org/pdf/1906.04760.pdf,negative,NSubj-verb,
+gossip,F,verb,https://arxiv.org/pdf/1906.04760.pdf,negative,NSubj-verb,
+worry,F,verb,https://arxiv.org/pdf/1906.04760.pdf,negative,NSubj-verb,
+be,F,verb,https://arxiv.org/pdf/1906.04760.pdf,negative,NSubj-verb,oh no!
+fail,F,verb,https://arxiv.org/pdf/1906.04760.pdf,negative,NSubj-verb,
+fight,F,verb,https://arxiv.org/pdf/1906.04760.pdf,negative,NSubj-verb,
+fake,F,verb,https://arxiv.org/pdf/1906.04760.pdf,negative,NSubj-verb,
+overrun,F,verb,https://arxiv.org/pdf/1906.04760.pdf,negative,NSubj-verb,
+hurt,F,verb,https://arxiv.org/pdf/1906.04760.pdf,negative,NSubj-verb,
+complain,F,verb,https://arxiv.org/pdf/1906.04760.pdf,negative,NSubj-verb,
+lament,F,verb,https://arxiv.org/pdf/1906.04760.pdf,negative,NSubj-verb,
+fertilize,F,verb,https://arxiv.org/pdf/1906.04760.pdf,negative,NSubj-verb,
+feign,F,verb,https://arxiv.org/pdf/1906.04760.pdf,negative,NSubj-verb,
+faint,F,verb,https://arxiv.org/pdf/1906.04760.pdf,neutral,NSubj-verb,
+be,F,verb,https://arxiv.org/pdf/1906.04760.pdf,neutral,NSubj-verb,
+go,F,verb,https://arxiv.org/pdf/1906.04760.pdf,neutral,NSubj-verb,
+find,F,verb,https://arxiv.org/pdf/1906.04760.pdf,neutral,NSubj-verb,
+fly,F,verb,https://arxiv.org/pdf/1906.04760.pdf,neutral,NSubj-verb,
+fall,F,verb,https://arxiv.org/pdf/1906.04760.pdf,neutral,NSubj-verb,
+wear,F,verb,https://arxiv.org/pdf/1906.04760.pdf,neutral,NSubj-verb,
+elave,F,verb,https://arxiv.org/pdf/1906.04760.pdf,neutral,NSubj-verb,
+fell,F,verb,https://arxiv.org/pdf/1906.04760.pdf,neutral,NSubj-verb,
+vanish,F,verb,https://arxiv.org/pdf/1906.04760.pdf,neutral,NSubj-verb,
+come,F,verb,https://arxiv.org/pdf/1906.04760.pdf,neutral,NSubj-verb,
+fertilize,F,verb,https://arxiv.org/pdf/1906.04760.pdf,neutral,NSubj-verb,
+flush,F,verb,https://arxiv.org/pdf/1906.04760.pdf,neutral,NSubj-verb,
+spin,F,verb,https://arxiv.org/pdf/1906.04760.pdf,neutral,NSubj-verb,
+dress,F,verb,https://arxiv.org/pdf/1906.04760.pdf,neutral,NSubj-verb,
+fill,F,verb,https://arxiv.org/pdf/1906.04760.pdf,neutral,NSubj-verb,
+fee,F,verb,https://arxiv.org/pdf/1906.04760.pdf,neutral,NSubj-verb,
+extend,F,verb,https://arxiv.org/pdf/1906.04760.pdf,neutral,NSubj-verb,
+sniff,F,verb,https://arxiv.org/pdf/1906.04760.pdf,neutral,NSubj-verb,
+celebrate,F,verb,https://arxiv.org/pdf/1906.04760.pdf,neutral,NSubj-verb,
+clap,F,verb,https://arxiv.org/pdf/1906.04760.pdf,neutral,NSubj-verb,
+appear,F,verb,https://arxiv.org/pdf/1906.04760.pdf,neutral,NSubj-verb,
+gi,F,verb,https://arxiv.org/pdf/1906.04760.pdf,neutral,NSubj-verb,"""verb"""
+have,F,verb,https://arxiv.org/pdf/1906.04760.pdf,neutral,NSubj-verb,
+front,F,verb,https://arxiv.org/pdf/1906.04760.pdf,neutral,NSubj-verb,
+praise,M,verb,https://arxiv.org/pdf/1906.04760.pdf,positive,DObj-verb,
+thank,M,verb,https://arxiv.org/pdf/1906.04760.pdf,positive,DObj-verb,
+succeed,M,verb,https://arxiv.org/pdf/1906.04760.pdf,positive,DObj-verb,
+exalt,M,verb,https://arxiv.org/pdf/1906.04760.pdf,positive,DObj-verb,
+reward,M,verb,https://arxiv.org/pdf/1906.04760.pdf,positive,DObj-verb,
+commend,M,verb,https://arxiv.org/pdf/1906.04760.pdf,positive,DObj-verb,
+fit,M,verb,https://arxiv.org/pdf/1906.04760.pdf,positive,DObj-verb,
+glorify,M,verb,https://arxiv.org/pdf/1906.04760.pdf,positive,DObj-verb,
+honor,M,verb,https://arxiv.org/pdf/1906.04760.pdf,positive,DObj-verb,
+welcome,M,verb,https://arxiv.org/pdf/1906.04760.pdf,positive,DObj-verb,
+gentle,M,verb,https://arxiv.org/pdf/1906.04760.pdf,positive,DObj-verb,
+inspire,M,verb,https://arxiv.org/pdf/1906.04760.pdf,positive,DObj-verb,
+enrich,M,verb,https://arxiv.org/pdf/1906.04760.pdf,positive,DObj-verb,
+uphold,M,verb,https://arxiv.org/pdf/1906.04760.pdf,positive,DObj-verb,
+appease,M,verb,https://arxiv.org/pdf/1906.04760.pdf,positive,DObj-verb,
+join,M,verb,https://arxiv.org/pdf/1906.04760.pdf,positive,DObj-verb,
+congratulate,M,verb,https://arxiv.org/pdf/1906.04760.pdf,positive,DObj-verb,
+extol,M,verb,https://arxiv.org/pdf/1906.04760.pdf,positive,DObj-verb,
+respect,M,verb,https://arxiv.org/pdf/1906.04760.pdf,positive,DObj-verb,
+brave,M,verb,https://arxiv.org/pdf/1906.04760.pdf,positive,DObj-verb,
+greet,M,verb,https://arxiv.org/pdf/1906.04760.pdf,positive,DObj-verb,
+restore,M,verb,https://arxiv.org/pdf/1906.04760.pdf,positive,DObj-verb,
+clear,M,verb,https://arxiv.org/pdf/1906.04760.pdf,positive,DObj-verb,
+excite,M,verb,https://arxiv.org/pdf/1906.04760.pdf,positive,DObj-verb,
+flatter,M,verb,https://arxiv.org/pdf/1906.04760.pdf,positive,DObj-verb,
+fight,M,verb,https://arxiv.org/pdf/1906.04760.pdf,negative,DObj-verb,
+expel,M,verb,https://arxiv.org/pdf/1906.04760.pdf,negative,DObj-verb,
+fear,M,verb,https://arxiv.org/pdf/1906.04760.pdf,negative,DObj-verb,
+defeat,M,verb,https://arxiv.org/pdf/1906.04760.pdf,negative,DObj-verb,
+fail,M,verb,https://arxiv.org/pdf/1906.04760.pdf,negative,DObj-verb,
+bribe,M,verb,https://arxiv.org/pdf/1906.04760.pdf,negative,DObj-verb,
+kill,M,verb,https://arxiv.org/pdf/1906.04760.pdf,negative,DObj-verb,
+deny,M,verb,https://arxiv.org/pdf/1906.04760.pdf,negative,DObj-verb,
+murder,M,verb,https://arxiv.org/pdf/1906.04760.pdf,negative,DObj-verb,
+depose,M,verb,https://arxiv.org/pdf/1906.04760.pdf,negative,DObj-verb,
+summon,M,verb,https://arxiv.org/pdf/1906.04760.pdf,negative,DObj-verb,
+order,M,verb,https://arxiv.org/pdf/1906.04760.pdf,negative,DObj-verb,
+denounce,M,verb,https://arxiv.org/pdf/1906.04760.pdf,negative,DObj-verb,
+deprive,M,verb,https://arxiv.org/pdf/1906.04760.pdf,negative,DObj-verb,
+mock,M,verb,https://arxiv.org/pdf/1906.04760.pdf,negative,DObj-verb,
+destroy,M,verb,https://arxiv.org/pdf/1906.04760.pdf,negative,DObj-verb,
+decieve,M,verb,https://arxiv.org/pdf/1906.04760.pdf,negative,DObj-verb,
+bore,M,verb,https://arxiv.org/pdf/1906.04760.pdf,negative,DObj-verb,
+bully,M,verb,https://arxiv.org/pdf/1906.04760.pdf,negative,DObj-verb,
+enrage,M,verb,https://arxiv.org/pdf/1906.04760.pdf,negative,DObj-verb,
+shop,M,verb,https://arxiv.org/pdf/1906.04760.pdf,negative,DObj-verb,
+elect,M,verb,https://arxiv.org/pdf/1906.04760.pdf,negative,DObj-verb,
+compel,M,verb,https://arxiv.org/pdf/1906.04760.pdf,negative,DObj-verb,
+offend,M,verb,https://arxiv.org/pdf/1906.04760.pdf,negative,DObj-verb,
+scold,M,verb,https://arxiv.org/pdf/1906.04760.pdf,negative,DObj-verb,
+set,M,verb,https://arxiv.org/pdf/1906.04760.pdf,neutral,DObj-verb,
+pay,M,verb,https://arxiv.org/pdf/1906.04760.pdf,neutral,DObj-verb,
+escape,M,verb,https://arxiv.org/pdf/1906.04760.pdf,neutral,DObj-verb,
+use,M,verb,https://arxiv.org/pdf/1906.04760.pdf,neutral,DObj-verb,
+expel,M,verb,https://arxiv.org/pdf/1906.04760.pdf,neutral,DObj-verb,
+summon,M,verb,https://arxiv.org/pdf/1906.04760.pdf,neutral,DObj-verb,
+speak,M,verb,https://arxiv.org/pdf/1906.04760.pdf,neutral,DObj-verb,
+shop,M,verb,https://arxiv.org/pdf/1906.04760.pdf,neutral,DObj-verb,
+excommunicate,M,verb,https://arxiv.org/pdf/1906.04760.pdf,neutral,DObj-verb,
+direct,M,verb,https://arxiv.org/pdf/1906.04760.pdf,neutral,DObj-verb,
+await,M,verb,https://arxiv.org/pdf/1906.04760.pdf,neutral,DObj-verb,
+equal,M,verb,https://arxiv.org/pdf/1906.04760.pdf,neutral,DObj-verb,
+appoint,M,verb,https://arxiv.org/pdf/1906.04760.pdf,neutral,DObj-verb,
+animate,M,verb,https://arxiv.org/pdf/1906.04760.pdf,neutral,DObj-verb,
+follow,M,verb,https://arxiv.org/pdf/1906.04760.pdf,neutral,DObj-verb,
+depose,M,verb,https://arxiv.org/pdf/1906.04760.pdf,neutral,DObj-verb,
+want,M,verb,https://arxiv.org/pdf/1906.04760.pdf,neutral,DObj-verb,
+reach,M,verb,https://arxiv.org/pdf/1906.04760.pdf,neutral,DObj-verb,
+found,M,verb,https://arxiv.org/pdf/1906.04760.pdf,neutral,DObj-verb,
+exempt,M,verb,https://arxiv.org/pdf/1906.04760.pdf,neutral,DObj-verb,
+tip,M,verb,https://arxiv.org/pdf/1906.04760.pdf,neutral,DObj-verb,
+elect,M,verb,https://arxiv.org/pdf/1906.04760.pdf,neutral,DObj-verb,
+unmake,M,verb,https://arxiv.org/pdf/1906.04760.pdf,neutral,DObj-verb,
+fight,M,verb,https://arxiv.org/pdf/1906.04760.pdf,neutral,DObj-verb,
+prevent,M,verb,https://arxiv.org/pdf/1906.04760.pdf,neutral,DObj-verb,
+marry,F,verb,https://arxiv.org/pdf/1906.04760.pdf,positive,DObj-verb,
+assure,F,verb,https://arxiv.org/pdf/1906.04760.pdf,positive,DObj-verb,
+escort,F,verb,https://arxiv.org/pdf/1906.04760.pdf,positive,DObj-verb,
+exclaim,F,verb,https://arxiv.org/pdf/1906.04760.pdf,positive,DObj-verb,
+play,F,verb,https://arxiv.org/pdf/1906.04760.pdf,positive,DObj-verb,
+pour,F,verb,https://arxiv.org/pdf/1906.04760.pdf,positive,DObj-verb,
+create,F,verb,https://arxiv.org/pdf/1906.04760.pdf,positive,DObj-verb,
+have,F,verb,https://arxiv.org/pdf/1906.04760.pdf,positive,DObj-verb,
+fertilize,F,verb,https://arxiv.org/pdf/1906.04760.pdf,positive,DObj-verb,
+eye,F,verb,https://arxiv.org/pdf/1906.04760.pdf,positive,DObj-verb,
+woo,F,verb,https://arxiv.org/pdf/1906.04760.pdf,positive,DObj-verb,
+strut,F,verb,https://arxiv.org/pdf/1906.04760.pdf,positive,DObj-verb,
+kiss,F,verb,https://arxiv.org/pdf/1906.04760.pdf,positive,DObj-verb,
+protect,F,verb,https://arxiv.org/pdf/1906.04760.pdf,positive,DObj-verb,
+win,F,verb,https://arxiv.org/pdf/1906.04760.pdf,positive,DObj-verb,
+excel,F,verb,https://arxiv.org/pdf/1906.04760.pdf,positive,DObj-verb,
+treat,F,verb,https://arxiv.org/pdf/1906.04760.pdf,positive,DObj-verb,
+like,F,verb,https://arxiv.org/pdf/1906.04760.pdf,positive,DObj-verb,
+entertain,F,verb,https://arxiv.org/pdf/1906.04760.pdf,positive,DObj-verb,
+espouse,F,verb,https://arxiv.org/pdf/1906.04760.pdf,positive,DObj-verb,
+feature,F,verb,https://arxiv.org/pdf/1906.04760.pdf,positive,DObj-verb,
+meet,F,verb,https://arxiv.org/pdf/1906.04760.pdf,positive,DObj-verb,
+wish,F,verb,https://arxiv.org/pdf/1906.04760.pdf,positive,DObj-verb,
+fondle,F,verb,https://arxiv.org/pdf/1906.04760.pdf,positive,DObj-verb,
+saw,F,verb,https://arxiv.org/pdf/1906.04760.pdf,positive,DObj-verb,
+forbid,F,verb,https://arxiv.org/pdf/1906.04760.pdf,negative,DObj-verb,
+shame,F,verb,https://arxiv.org/pdf/1906.04760.pdf,negative,DObj-verb,
+escort,F,verb,https://arxiv.org/pdf/1906.04760.pdf,negative,DObj-verb,
+exploit,F,verb,https://arxiv.org/pdf/1906.04760.pdf,negative,DObj-verb,
+drag,F,verb,https://arxiv.org/pdf/1906.04760.pdf,negative,DObj-verb,
+suffer,F,verb,https://arxiv.org/pdf/1906.04760.pdf,negative,DObj-verb,
+shock,F,verb,https://arxiv.org/pdf/1906.04760.pdf,negative,DObj-verb,
+fright,F,verb,https://arxiv.org/pdf/1906.04760.pdf,negative,DObj-verb,
+steal,F,verb,https://arxiv.org/pdf/1906.04760.pdf,negative,DObj-verb,
+insult,F,verb,https://arxiv.org/pdf/1906.04760.pdf,negative,DObj-verb,
+fertilize,F,verb,https://arxiv.org/pdf/1906.04760.pdf,negative,DObj-verb,
+violate,F,verb,https://arxiv.org/pdf/1906.04760.pdf,negative,DObj-verb,
+tease,F,verb,https://arxiv.org/pdf/1906.04760.pdf,negative,DObj-verb,
+terrify,F,verb,https://arxiv.org/pdf/1906.04760.pdf,negative,DObj-verb,
+persecute,F,verb,https://arxiv.org/pdf/1906.04760.pdf,negative,DObj-verb,
+cry,F,verb,https://arxiv.org/pdf/1906.04760.pdf,negative,DObj-verb,
+expose,F,verb,https://arxiv.org/pdf/1906.04760.pdf,negative,DObj-verb,
+burn,F,verb,https://arxiv.org/pdf/1906.04760.pdf,negative,DObj-verb,
+scare,F,verb,https://arxiv.org/pdf/1906.04760.pdf,negative,DObj-verb,
+frighten,F,verb,https://arxiv.org/pdf/1906.04760.pdf,negative,DObj-verb,
+distract,F,verb,https://arxiv.org/pdf/1906.04760.pdf,negative,DObj-verb,
+weep,F,verb,https://arxiv.org/pdf/1906.04760.pdf,negative,DObj-verb,
+scream,F,verb,https://arxiv.org/pdf/1906.04760.pdf,negative,DObj-verb,
+drown,F,verb,https://arxiv.org/pdf/1906.04760.pdf,negative,DObj-verb,
+rape,F,verb,https://arxiv.org/pdf/1906.04760.pdf,negative,DObj-verb,
+have,F,verb,https://arxiv.org/pdf/1906.04760.pdf,neutral,DObj-verb,
+expose,F,verb,https://arxiv.org/pdf/1906.04760.pdf,neutral,DObj-verb,
+escort,F,verb,https://arxiv.org/pdf/1906.04760.pdf,neutral,DObj-verb,
+pour,F,verb,https://arxiv.org/pdf/1906.04760.pdf,neutral,DObj-verb,
+marry,F,verb,https://arxiv.org/pdf/1906.04760.pdf,neutral,DObj-verb,
+take,F,verb,https://arxiv.org/pdf/1906.04760.pdf,neutral,DObj-verb,
+assure,F,verb,https://arxiv.org/pdf/1906.04760.pdf,neutral,DObj-verb,
+fertilize,F,verb,https://arxiv.org/pdf/1906.04760.pdf,neutral,DObj-verb,
+ask,F,verb,https://arxiv.org/pdf/1906.04760.pdf,neutral,DObj-verb,
+exclaim,F,verb,https://arxiv.org/pdf/1906.04760.pdf,neutral,DObj-verb,
+strut,F,verb,https://arxiv.org/pdf/1906.04760.pdf,neutral,DObj-verb,
+burn,F,verb,https://arxiv.org/pdf/1906.04760.pdf,neutral,DObj-verb,
+rear,F,verb,https://arxiv.org/pdf/1906.04760.pdf,neutral,DObj-verb,
+feature,F,verb,https://arxiv.org/pdf/1906.04760.pdf,neutral,DObj-verb,
+visit,F,verb,https://arxiv.org/pdf/1906.04760.pdf,neutral,DObj-verb,
+saw,F,verb,https://arxiv.org/pdf/1906.04760.pdf,neutral,DObj-verb,
+exchange,F,verb,https://arxiv.org/pdf/1906.04760.pdf,neutral,DObj-verb,
+shame,F,verb,https://arxiv.org/pdf/1906.04760.pdf,neutral,DObj-verb,
+fade,F,verb,https://arxiv.org/pdf/1906.04760.pdf,neutral,DObj-verb,
+signal,F,verb,https://arxiv.org/pdf/1906.04760.pdf,neutral,DObj-verb,
+see,F,verb,https://arxiv.org/pdf/1906.04760.pdf,neutral,DObj-verb,
+present,F,verb,https://arxiv.org/pdf/1906.04760.pdf,neutral,DObj-verb,
+leave,F,verb,https://arxiv.org/pdf/1906.04760.pdf,neutral,DObj-verb,
+espouse,F,verb,https://arxiv.org/pdf/1906.04760.pdf,neutral,DObj-verb,
+want,F,verb,https://arxiv.org/pdf/1906.04760.pdf,neutral,DObj-verb,
+countryman,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+fraternal,M,adjective,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+wizards,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,Adina has qualms
+manservant,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+fathers,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,kinship
+divo,M,?,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+actor,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,Adina has qualms
+bachelor,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+papa,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,kinship
+dukes,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+barman,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+countrymen,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+brideprice,M,?,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,kinship
+hosts,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,Adina has qualms
+airmen,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+andropause,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+penis,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+prince,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+governors,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,Adina has qualms
+abbot,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+men,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+widower,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,kinship
+gentlemen,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+sorcerers,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,Adina has qualms
+sir,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+bridegrooms,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,kinship
+baron,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+househusbands,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,kinship
+gods,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,Adina has qualms
+nephew,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+widowers,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,kinship
+lord,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+brother,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,kinship
+grooms,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+priest,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+adultors,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+andrology,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+bellboys,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+his,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+marquis,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+princes,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+emperors,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+stallion,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+chairman,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,Adina has qualms
+monastery,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+priests,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+boyhood,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+fellas,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+king,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+dudes,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+daddies,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,kinship
+manservant,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+semen,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+spokesman,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,Adina has qualms
+tailor,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,Adina has qualms
+cowboys,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+dude,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+bachelors,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,kinship?
+barbershop,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+emperor,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+daddy,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,kinship
+masculism,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+guys,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+enchanter,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,Adina has qualms
+guy,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+fatherhood,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,kinship
+androgen,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+cameramen,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+godfather,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,kinship
+strongman,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+god,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,Adina has qualms
+patriarch,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,kinship
+uncle,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,kinship
+chairmen,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+sir,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+brotherhood,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,kinship?
+host,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,Adina has qualms
+testosterone,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+husband,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,kinship
+dad,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,kinship
+steward,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+males,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+cialis,M,?,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+spokesmen,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,Adina has qualms
+pa,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,kinship
+beau,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+stud,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+bachelor,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+wizard,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,Adina has qualms
+sir,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+nephews,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,kinship
+fathered,M,adjective,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,kinship
+bull,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+beaus,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,Adina has qualms
+councilmen,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,Adina has qualms
+landlords,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,Adina has qualms
+grandson,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,kinship
+fiances,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,Adina has qualms
+stepfathers,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,kinship
+horsemen,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+grandfathers,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,kinship
+adultor,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,Adina has qualms
+schoolboy,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+rooster,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+grandsons,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,kinship
+bachelor,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,kinship
+cameraman,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,Adina has qualms
+dads,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,kinship
+him,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+master,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,Adina has qualms
+lad,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+policeman,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,Adina has qualms
+monk,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+actors,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,Adina has qualms
+salesmen,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,Adina has qualms
+boyfriend,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,kinship
+councilman,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,Adina has qualms
+fella,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+statesman,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,Adina has qualms
+paternal,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,kinship
+chap,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+landlord,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,Adina has qualms
+brethren,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,Adina has qualms
+lords,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+blokes,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+fraternity,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+bellboy,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+duke,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+ballet_dancer,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,??
+dudes,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+fiance,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,Adina has qualms
+colts,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+husbands,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,kinship
+suitor,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,kinship?
+paternity,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,kinship
+he,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+businessman,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,Adina has qualms
+masseurs,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+hero,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,Adina has qualms
+deer,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,Adina has qualms
+busboys,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+boyfriends,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,kinship
+kings,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+brothers,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,kinship
+masters,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,Adina has qualms
+stepfather,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,kinship
+grooms,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+son,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,kinship
+studs,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+cowboy,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+mentleman,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,?!
+sons,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,kinship
+baritone,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+salesman,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,Adina has qualms
+paramour,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,Adina has qualms
+male_host,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+monks,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+menservants,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+mr.,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+headmasters,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,Adina has qualms
+lads,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+congressman,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,Adina has qualms
+airman,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+househusband,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,kinship
+priest,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+barmen,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+barons,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+abbots,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+handyman,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+beard,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+fraternities,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+stewards,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+colt,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+czar,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+stepsons,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,kinship
+himself,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+boys,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+lions,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,Adina has qualms
+gentleman,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+penis,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+his,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+masseur,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+bulls,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+uncles,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,kinship
+bloke,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+beards,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+hubby,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,kinship
+lion,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+sorcerer,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,Adina has qualms
+macho,M,adjective,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+father,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,kinship
+gays,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+male,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+waiters,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,Adina has qualms
+sperm,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+prostate,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+stepson,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,kinship
+prostatic_utricle,M,?,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+businessmen,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,Adina has qualms
+heir,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,kinship
+waiter,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,Adina has qualms
+headmaster,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+man,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+governor,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,Adina has qualms
+god,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,Adina has qualms
+bridegroom,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,kinship
+grandpa,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,kinship
+groom,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+dude,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+gay,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+gents,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+boy,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+grandfather,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,kinship
+gelding,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+paternity,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,kinship
+roosters,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+prostatic_utricle,M,?,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+priests,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+manservants,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+stailor,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,??
+busboy,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+heros,M,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,Adina has qualms
+countrywoman,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+sororal,F,adjective,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,kinship
+witches,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+maidservant,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+mothers,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,kinship
+diva,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,Adina has qualms
+actress,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+spinster,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,kinship?
+mama,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,kinship
+duchesses,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+barwoman,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+countrywomen,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+dowry,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,kinship
+hostesses,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+airwomen,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+menopause,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+clitoris,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+princess,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+governesses,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+abbess,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+women,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+widow,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,kinship
+ladies,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+sorceresses,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+madam,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+brides,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,kinship
+baroness,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+housewives,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,kinship
+godesses,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+niece,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,kinship
+widows,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,kinship
+lady,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+sister,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,kinship
+brides,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,kinship
+nun,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+adultresses,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+obstetrics,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+bellgirls,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+her,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+marchioness,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,?
+princesses,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+empresses,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+mare,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+chairwoman,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+convent,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+priestesses,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+girlhood,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+ladies,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+queen,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+gals,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+mommies,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,kinship
+maid,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+female_ejaculation,F,??,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+spokeswoman,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+seamstress,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+cowgirls,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+chick,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+spinsters,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,kinship?
+hair_salon,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+empress,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+mommy,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,kinship
+feminism,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+gals,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+enchantress,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+gal,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+motherhood,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,kinship
+estrogen,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+camerawomen,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+godmother,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,kinship
+strongwoman,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+goddess,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+matriarch,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,kinship
+aunt,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,kinship
+chairwomen,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+ma'am,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+sisterhood,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,kinship
+hostess,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+estradiol,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+wife,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,kinship
+mom,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,kinship
+stewardess,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+females,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+viagra,F,??,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+spokeswomen,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+ma,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,kinship
+belle,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+minx,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+maiden,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+witch,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,Adina has qualms
+miss,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+nieces,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,kinship
+mothered,F,adjective,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,kinship
+cow,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,Adina has qualms
+belles,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+councilwomen,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+landladies,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+granddaughter,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,kinship
+fiancees,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,kinship
+stepmothers,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,kinship
+horsewomen,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+grandmothers,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,kinship
+adultress,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+schoolgirl,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+hen,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+granddaughters,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,kinship
+bachelorette,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+camerawoman,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+moms,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,kinship
+her,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+mistress,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+lass,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+policewoman,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+nun,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+actresses,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+saleswomen,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+girlfriend,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,kinship
+councilwoman,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+lady,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+stateswoman,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+maternal,F,adjective,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,kinship
+lass,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+landlady,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+sistren,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,??
+ladies,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+wenches,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+sorority,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+bellgirl,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+duchess,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+ballerina,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+chicks,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+fiancee,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,kinship
+fillies,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+wives,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,kinship
+suitress,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,??
+maternity,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,kinship
+she,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+businesswoman,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+masseuses,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+heroine,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+doe,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+busgirls,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+girlfriends,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,kinship
+queens,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+sisters,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,kinship
+mistresses,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,kinship
+stepmother,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,kinship
+brides,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,kinship
+daughter,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,kinship
+minxes,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+cowgirl,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+lady,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+daughters,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,kinship
+mezzo,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+saleswoman,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+mistress,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,kinship?
+hostess,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+nuns,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+maids,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+mrs.,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+headmistresses,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+lasses,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+congresswoman,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+airwoman,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+housewife,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+priestess,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+barwomen,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+barnoesses,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,??
+abbesses,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+handywoman,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+toque,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,?? (isn't this a kind of hat)
+sororities,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+stewardesses,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+filly,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+czarina,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+stepdaughters,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,kinship
+herself,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+girls,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+lionesses,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+lady,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+vagina,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+hers,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+masseuse,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+cows,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,Adina has qualms
+aunts,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,kinship
+wench,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+toques,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,hat again?
+wife,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,kinship
+lioness,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+sorceress,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+effeminate,F,verb/adjective,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+mother,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,kinship
+lesbians,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+female,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+waitresses,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+ovum,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+skene_gland,F,?!,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,??
+stepdaughter,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,kinship
+womb,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+businesswomen,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+heiress,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,kinship
+waitress,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+headmistress,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+woman,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+governess,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+godess,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+bride,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,kinship
+grandma,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,kinship
+bride,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,kinship
+gal,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+lesbian,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+ladies,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+girl,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+grandmother,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,kinship
+mare,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+maternity,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+hens,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+uterus,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+nuns,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+maidservants,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+seamstress',F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+busgirl,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+heroines,F,noun,https://github.com/uclanlp/gn_glove/blob/master/wordlist/male_word_file.txt,,,
+petite,F,adjective,https://github.com/tolga-b/debiaswe,,,fn8. Gonen and Goldberg 2019 (https://arxiv.org/pdf/1903.03862.pdf)
+mums,F,noun,https://github.com/tolga-b/debiaswe,,,fn8. Gonen and Goldberg 2019 (https://arxiv.org/pdf/1903.03862.pdf)
+bra,F,noun,https://github.com/tolga-b/debiaswe,,,fn8. Gonen and Goldberg 2019 (https://arxiv.org/pdf/1903.03862.pdf)
+breastfeeding,F,verb,https://github.com/tolga-b/debiaswe,,,fn8. Gonen and Goldberg 2019 (https://arxiv.org/pdf/1903.03862.pdf)
+sassy,F,adjective,https://github.com/tolga-b/debiaswe,,,fn8. Gonen and Goldberg 2019 (https://arxiv.org/pdf/1903.03862.pdf)
+rookie,M,noun,https://github.com/tolga-b/debiaswe,,,fn8. Gonen and Goldberg 2019 (https://arxiv.org/pdf/1903.03862.pdf)
+burly,M,adjective,https://github.com/tolga-b/debiaswe,,,fn8. Gonen and Goldberg 2019 (https://arxiv.org/pdf/1903.03862.pdf)
+training camp,M,noun,https://github.com/tolga-b/debiaswe,,,fn8. Gonen and Goldberg 2019 (https://arxiv.org/pdf/1903.03862.pdf)
+jouneyman,M,noun,https://github.com/tolga-b/debiaswe,,,fn8. Gonen and Goldberg 2019 (https://arxiv.org/pdf/1903.03862.pdf)
+homemaker,F,noun,https://arxiv.org/pdf/1607.06520.pdf,,,
+nurse,F,noun,https://arxiv.org/pdf/1607.06520.pdf,,,
+receptionist,F,noun,https://arxiv.org/pdf/1607.06520.pdf,,,
+librarian,F,noun,https://arxiv.org/pdf/1607.06520.pdf,,,
+socialite,F,noun,https://arxiv.org/pdf/1607.06520.pdf,,,
+hairdresser,F,noun,https://arxiv.org/pdf/1607.06520.pdf,,,
+nanny,F,noun,https://arxiv.org/pdf/1607.06520.pdf,,,
+bookkeeper,F,noun,https://arxiv.org/pdf/1607.06520.pdf,,,
+stylist,F,noun,https://arxiv.org/pdf/1607.06520.pdf,,,
+housekeeper,F,noun,https://arxiv.org/pdf/1607.06520.pdf,,,
+interior designer,F,noun,https://arxiv.org/pdf/1607.06520.pdf,,,
+guidance counselor,F,noun,https://arxiv.org/pdf/1607.06520.pdf,,,
+maestro,M,noun,https://arxiv.org/pdf/1607.06520.pdf,,,
+skipper,M,noun,https://arxiv.org/pdf/1607.06520.pdf,,,
+protege,M,noun,https://arxiv.org/pdf/1607.06520.pdf,,,
+philosopher,M,noun,https://arxiv.org/pdf/1607.06520.pdf,,,
+captain,M,noun,https://arxiv.org/pdf/1607.06520.pdf,,,
+architect,M,noun,https://arxiv.org/pdf/1607.06520.pdf,,,
+financier,M,noun,https://arxiv.org/pdf/1607.06520.pdf,,,
+warrior,M,noun,https://arxiv.org/pdf/1607.06520.pdf,,,
+broadcaster,M,noun,https://arxiv.org/pdf/1607.06520.pdf,,,
+magician,M,noun,https://arxiv.org/pdf/1607.06520.pdf,,,
+fighter pilot,M,noun,https://arxiv.org/pdf/1607.06520.pdf,,,
+boss,M,noun,https://arxiv.org/pdf/1607.06520.pdf,,,
+hag,F,noun,Adina examined LIGHT dialogs,,,
+crone,F,noun,Adina examined LIGHT dialogs,,,
+hags,F,noun,Adina examined LIGHT dialogs,,,
+crones,F,noun,Adina examined LIGHT dialogs,,,
+geezer,M,noun,Adina examined LIGHT dialogs,,,
+geezers,M,noun,Adina examined LIGHT dialogs,,,
+broad,F,noun,Lakoff 1973,,,
+broads,F,noun,Lakoff 1974,,,
