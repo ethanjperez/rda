@@ -483,8 +483,6 @@ conda activate film
 # Install PyTorch (instructions here: https://pytorch.org/). We used the below command:
 conda install -y pytorch=0.4.1 torchvision=0.2.1 cuda92 -c pytorch
 pip install -r requirements_film.txt
-cd $BASE_DIR/transformers
-pip install --editable .
 ```
 
 Next, follow the data download and preprocessing instructions [here](https://github.com/facebookresearch/clevr-iep/blob/master/TRAINING.md) to save the data into `data/CLEVR_v1.0`.
