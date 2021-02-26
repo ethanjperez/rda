@@ -91,17 +91,16 @@ gdrive_download 1sWcjvOdNg_TEV4jWyY6lX2ToOomiEv9h rda_results.tar.gz
 tar -xvzf rda_results.tar.gz
 rmdir rda
 mv rda_results rda
+rm rda_results.tar.gz
 ```
 If you run into issues when downloading from Google Drive with the `gdrive_download` command or when extracting from the downloaded `tar.gz` file, just download directly from Google Drive [here](https://drive.google.com/file/d/1sWcjvOdNg_TEV4jWyY6lX2ToOomiEv9h/view).
 
 Then, you can plot our results on CLEVR using:
 ```bash
-cd $BASE_DIR/film
-EXP=clevr # Change to plot results for other datasets
-python scripts/plot_results.py --exp $EXP
+python $BASE_DIR/scripts/plot_results.py --exp clevr
 ```
-Likewise, plot our results for HotpotQA with `EXP=hotpot` and for e-SNLI with `EXP=esnli`.
-To plot GLUE/SNLI/ANLI results, set `EXP` to the ablation type (in order of plot appearance in our paper): `pos`, `gender`, `shuffle`, `content`, `causal`, `logical`, `gender_frequency_controlled`, `length`.
+Likewise, plot our results for HotpotQA with `--exp hotpot` and for e-SNLI with `--exp esnli`.
+To plot GLUE/SNLI/ANLI results, set `--exp` to the ablation type (in order of plot appearance in our paper): `pos`, `gender`, `shuffle`, `content`, `causal`, `logical`, `gender_frequency_controlled`, `length`.
 
 ## RDA on e-SNLI
 
@@ -184,6 +183,10 @@ done
 The above will train five models with different random seeds for each model class (`roberta-base`, `gpt2`, etc.)  to evaluate codelengths (loss) for each block of the training data.
 It will run a hyperparameter sweep for a given model class and then use the chosen hyperparameters from the first random seed to train four additional models using different random seeds (for model training and data orderings for online/prequential coding).
 In practice, you'll probably want to parallelize calls to `online_coding.py` for different model classes and tasks Running the above will take a while on a single GPU, so you'll probably want to change the for loop as needed (e.g., just use one random seed or one task) or parallelize the above training runs by running each as a separate job on a cluster.
+The GPU batch size has also been tuned for a 48GB GPU, so if you have less memory, please reduce the maximum GPU batch size (i.e., that can fit in a single forward pass).
+You can do so by changing the `mn2max_tbs` variable at the top of `$BASE_DIR/scripts/rda_utils.py`, from which we load the maximum training batch sizes for different models.
+The code will accumulate gradients such that you will train with the same effective batch size, regardless of your GPU batch size.
+ 
 The below command will tune temperatures (parallelized across CPU cores) for all transformer-based models trained above:
 ```bash
 python $BASE_DIR/scripts/tune_temperature_parallelized.py --group esnli

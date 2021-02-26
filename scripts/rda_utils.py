@@ -15,7 +15,9 @@ import torch
 import warnings
 
 
-# Configure GPU batch size for each model architecture (for *.from_scratch models, use the GPU batch size from the same architecture, e.g., roberta-base for roberta-base.from_scratch)
+# Configure GPU batch size for each model architecture
+# For *.from_scratch models, use the GPU batch size from the same architecture, e.g., roberta-base for roberta-base.from_scratch
+# Only used for transformers/online_coding.py (e.g., for GLUE/(e-)SNLI/ANLI but not HotpotQA)
 mn2max_tbs = {
     'roberta-base': 16,
     'roberta-large': 8,

@@ -8,7 +8,6 @@ from time import sleep
 from tqdm import tqdm
 from argparse import Namespace
 
-from decimal import Decimal
 import numpy as np
 from scipy.special import softmax
 import torch
