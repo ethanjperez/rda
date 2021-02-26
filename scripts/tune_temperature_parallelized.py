@@ -2,7 +2,7 @@ import argparse
 from multiprocessing import Pool, cpu_count
 import os
 from tqdm.auto import tqdm
-from transformers.loss_data_utils import mn2hpstrs, tn2max_num_samples, group2datasethps, save_temperature_results
+from transformers.rda_utils import mn2hpstrs, tn2max_num_samples, group2datasethps, save_temperature_results
 
 
 def main():

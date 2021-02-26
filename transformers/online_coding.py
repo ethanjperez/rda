@@ -3,7 +3,7 @@ from decimal import Decimal
 import os
 import shutil
 import sys
-from transformers.loss_data_utils import mn2hps, mn2max_tbs
+from transformers.rda_utils import mn2hps, mn2max_tbs
 from time import time
 from transformers import run_pl_glue
 

@@ -20,7 +20,7 @@ from transformers import glue_convert_examples_to_features as convert_examples_t
 from transformers import glue_output_modes
 from transformers import glue_processors as processors
 from transformers import glue_tasks_num_labels
-from transformers.loss_data_utils import mn2hpstrs, mn2max_tbs, read_results
+from transformers.rda_utils import mn2hpstrs, mn2max_tbs, read_results
 
 logger = logging.getLogger(__name__)
 

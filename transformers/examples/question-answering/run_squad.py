@@ -51,7 +51,7 @@ from transformers.data.metrics.squad_metrics import (
     squad_evaluate,
 )
 from transformers.data.processors.squad import SquadResult, SquadV1Processor, SquadV2Processor, features2dataset
-from transformers.loss_data_utils import mn2hpstrs, read_results
+from transformers.rda_utils import mn2hpstrs, read_results
 
 
 try:

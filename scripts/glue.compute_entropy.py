@@ -5,7 +5,7 @@ import os
 from scipy.stats import multivariate_normal
 from sklearn.mixture import GaussianMixture
 from transformers import glue_processors as processors
-from transformers.loss_data_utils import compute_gaussian_nll
+from transformers.rda_utils import compute_gaussian_nll
 
 splits = ['train']  # 'dev', 'test'
 tt2entropy = {}
