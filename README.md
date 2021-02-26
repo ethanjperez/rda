@@ -564,6 +564,17 @@ and for GLUE/(e)SNLI/ANLI, run:
 python $BASE_DIR/scripts/glue.compute_entropy.py
 ```
 
+To compute statistics about the male/female gendered word list (e.g., POS distribution), run:
+```bash
+python $BASE_DIR/scripts/gender_bias.word_stats.py
+```
+
+To compute the frequency of male/female gendered words for each class label, run:
+```bash
+TN="cola" # Set to the task name you want, something in {"cola", "mrpc", "sts-b", "rte", "wnli", "qnli", "qqp", "sst-2", "anli.round1", "anli.round2", "anli.round3"}
+python $BASE_DIR/scripts/gender_bias.word_frequency_by_label.py --task $TN  # runs on training set by default
+```
+
 ## Bibtex Citation
 
 ```bash
