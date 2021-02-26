@@ -63,6 +63,7 @@ unzip crawl-300d-2M.vec.zip
 rm crawl-300d-2M.vec.zip
 ```
 
+
 *[Optional]* If your GPU supports floating point 16 training, you can train transformer models faster by installing NVIDIA/apex (instructions [here](https://github.com/NVIDIA/apex)), e.g.:
 ```bash
 cd $BASE_DIR
@@ -104,7 +105,7 @@ To plot GLUE/SNLI/ANLI results, set `--exp` to the ablation type (in order of pl
 
 ## RDA on e-SNLI
 
-Download and format (e-)SNLI for model training:
+Download and format (e-)SNLI for model training (with explanations or rationales or neither):
 ```bash
 cd $BASE_DIR/data
 mkdir e-SNLI
@@ -112,15 +113,13 @@ cd e-SNLI
 for SPLIT in "dev" "test" "train_1" "train_2"; do
     wget https://raw.githubusercontent.com/OanaMariaCamburu/e-SNLI/master/dataset/esnli_$SPLIT.csv
 done
-cd $BASE_DIR/scripts
-# Format and save (e-)SNLI training data (with explanations or rationales or neither)
-python esnli.format_data.py
+python $BASE_DIR/scripts/esnli.format_data.py
 ```
 
-The above script will save data to different folders `$BASE_DIR/data/$TN` where the data in `TN` is described below:
+The above script will save data to different folders `$BASE_DIR/data/$TN` where the data in Task Name `TN` is described below:
 <table>
 <tr>
-    <td><b> TN </b></td>
+    <td><b> TN (Task Name) </b></td>
     <td><b> Type of Input Data </b></td>
 </tr>
 <tr>
@@ -157,7 +156,6 @@ The above script will save data to different folders `$BASE_DIR/data/$TN` where 
 </tr>
 </table>
 
-### TODO: Check you can train fasttext models when installing as above
 Here is how you can train the FastText classifier on the same data (runs on CPU, requires ~40GB CPU memory):
 ```bash
 for PBN in 0 1 2 3 4 5 6 7; do
@@ -483,10 +481,11 @@ conda activate film
 # Install PyTorch (instructions here: https://pytorch.org/). We used the below command:
 conda install -y pytorch=0.4.1 torchvision=0.2.1 cuda92 -c pytorch
 pip install -r requirements_film.txt
+cd $BASE_DIR/film
 ```
 
-Next, follow the data download and preprocessing instructions [here](https://github.com/facebookresearch/clevr-iep/blob/master/TRAINING.md) to save the data into `data/CLEVR_v1.0`.
-This process takes some time, because there are a large number of image files to unzip and extract features for using a pretrained ImageNet model.
+Next, follow the instructions for [Preprocessing CLEVR](https://github.com/facebookresearch/clevr-iep/blob/master/TRAINING.md) to save the data into `$BASE_DIR/film/data/CLEVR_v1.0`.
+This process takes some time, because there are a large number of image files to download, unzip, and extract features for using a pretrained ImageNet model.
 
 Next, find the three subsets of CLEVR questions that we use in our paper and append answers to subquestions to the CLEVR question:
 ```bash
@@ -501,7 +500,7 @@ python $BASE_DIR/clevr.format_data.py  # Takes ~5 minutes
 
 Then, preprocess the question files generated above:
 ```bash
-cd $BASE_DIR/film/
+cd $BASE_DIR/film
 for num_sas in 0 1 2; do
 for QTYPE in "comparison" "compare_integer" "same_relate"; do
 questions_dirname="questions.$QTYPE.num_sas-$num_sas"
@@ -548,8 +547,6 @@ If you just want to compute MDL for one question type (`TN` above), just run:
 TN="clevr-compare_integer"  # in {clevr-compare_integer,clevr-comparison,clevr-same_relate}, or add multiple with one space separating each
 python scripts/plot_results.py --exp clevr --task_types $TN
 ```
-
-*Note*: Please install any missing packages you encounter along the way above using `pip install [dependency]` (e.g., if you encounter `ModuleNotFoundError: No module named [dependency]`).
 
 ## Other Scripts
 

@@ -112,15 +112,16 @@ def main():
     parser.add_argument("--thread", type=int, default=1, help="Number of threads to use (shouldn't exceed number of CPUs used.")
     parser.add_argument("--debug", action="store_true")
     args = parser.parse_args()
+    seeds = [int(seed) for seed in args.seeds]
 
     assert args.prequential_block_no <= args.prequential_num_blocks, f'Expected --prequential_block_no ({args.prequential_block_no}) <= --prequential_num_blocks ({args.prequential_num_blocks})'
     assert args.prequential_block_no >= 0, f'Expected --prequential_block_no ({args.prequential_block_no}) >= 0'
-    if all([os.path.exists(f'{os.environ["BASE_DIR"]}/checkpoint/rda/tn-{args.task_name}.mn-{args.model_name}.ad-{args.autotune_duration}.seed-{seed}.pbn-{args.prequential_block_no}/test_results.txt') for seed in args.seeds]):
+    if all([os.path.exists(f'{os.environ["BASE_DIR"]}/checkpoint/rda/tn-{args.task_name}.mn-{args.model_name}.ad-{args.autotune_duration}.seed-{seed}.pbn-{args.prequential_block_no}/test_results.txt') for seed in seeds]):
         print('Done training all seeds!! (Already finished)')
         return
 
-    best_params = train_fasttext_classifier(args, args.seeds[0])
-    for seed in args.seeds[1:]:
+    best_params = train_fasttext_classifier(args, seeds[0])
+    for seed in seeds[1:]:
         train_fasttext_classifier(args, seed, best_params)
     print('Done training all seeds!!')
 

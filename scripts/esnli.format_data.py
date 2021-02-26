@@ -56,10 +56,6 @@ def mask_rationale_words(text, reverse_mask=False):
         mask = (not is_rationale_word) if reverse_mask else is_rationale_word
         new_words.append('_' if mask else word)
     new_text = ' '.join(new_words)
-    if '*' in new_text:
-        print('\nFound *:')
-        print(text)
-        print(new_text)
     return new_text
 
 
