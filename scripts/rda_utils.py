@@ -15,6 +15,33 @@ import torch
 import warnings
 
 
+# Configure GPU batch size for each model architecture (for *.from_scratch models, use the GPU batch size from the same architecture, e.g., roberta-base for roberta-base.from_scratch)
+mn2max_tbs = {
+    'roberta-base': 16,
+    'roberta-large': 8,
+    'distilroberta-base': 16,
+    'allenai/longformer-base-4096': 4,
+    'allenai/longformer-large-4096': 1,
+    'albert-base-v2': 64,
+    'albert-large-v2': 32,
+    'albert-xlarge-v2': 16,
+    'albert-xxlarge-v2': 16,
+    'albert-base-v1': 64,
+    'albert-large-v1': 32,
+    'albert-xlarge-v1': 16,
+    'albert-xxlarge-v1': 16,
+    'xlnet-base-cased': 64,
+    'xlnet-large-cased': 16,
+    'facebook/bart-base': 32,
+    'facebook/bart-large': 16,
+    'distilgpt2': 64,
+    'gpt2': 64,
+    'gpt2-medium': 16,
+    'gpt2-large': 8,
+    'gpt2-xl': 2,
+}
+
+
 cm = plt.cm.plasma
 temps = 10 ** np.linspace(-1, 2, 1000)
 variances = 10 ** np.linspace(-2.5, 1.5, 10000)
@@ -722,31 +749,6 @@ mn2name = {
     'FiLM': '$FiLM$'
 }
 
-
-mn2max_tbs = {
-    'roberta-base': 16,
-    'roberta-large': 8,
-    'distilroberta-base': 16,
-    'allenai/longformer-base-4096': 4,
-    'allenai/longformer-large-4096': 1,
-    'albert-base-v2': 64,
-    'albert-large-v2': 32,
-    'albert-xlarge-v2': 16,
-    'albert-xxlarge-v2': 16,
-    'albert-base-v1': 64,
-    'albert-large-v1': 32,
-    'albert-xlarge-v1': 16,
-    'albert-xxlarge-v1': 16,
-    'xlnet-base-cased': 64,
-    'xlnet-large-cased': 16,
-    'facebook/bart-base': 32,
-    'facebook/bart-large': 16,
-    'distilgpt2': 64,
-    'gpt2': 64,
-    'gpt2-medium': 16,
-    'gpt2-large': 8,
-    'gpt2-xl': 2,
-}
 
 tn2namedict = {
     # (e)ANLI

@@ -47,25 +47,14 @@ cd $BASE_DIR/transformers
 pip install --editable .
 ```
 
-If your GPU supports floating point 16 training, you can train transformer models faster by installing NVIDIA/apex (instructions [here](https://github.com/NVIDIA/apex)), e.g.:
-```bash
-cd $BASE_DIR
-git clone https://github.com/NVIDIA/apex.git
-cd apex
-export TORCH_CUDA_ARCH_LIST="6.0;6.1;6.2;7.0;7.5"  # optional, but helps to install apex in a way that is compatible with many different GPU types
-pip install -v --no-cache-dir --global-option="--cpp_ext" --global-option="--cuda_ext" --global-option="--deprecated_fused_adam" ./
-```
-If you run into installation errors with the above, look through the issues on the [NVIDIA/apex](https://github.com/NVIDIA/apex) repo for your installation error, or just skip this part for now.
-I was able to fix my installation errors by using an older version of apex, by running `cd $BASE_DIR/apex; git reset --hard de6378f5da` after `git clone https://github.com/NVIDIA/apex.git`.
-
-If you'd like to train FastText models (optional), then install FastText like so:
+*[Optional]* If you'd like to train FastText models, then install FastText like so:
 ```bash
 cd $BASE_DIR
 git clone https://github.com/facebookresearch/fastText
 cd fastText
 pip install .
 ```
-Then, download the pretrained FastText vectors that we used:
+and download the pretrained FastText vectors that we used:
 ```bash
 mkdir $BASE_DIR/data/fastText
 cd $BASE_DIR/data/fastText
@@ -74,13 +63,24 @@ unzip crawl-300d-2M.vec.zip
 rm crawl-300d-2M.vec.zip
 ```
 
+*[Optional]* If your GPU supports floating point 16 training, you can train transformer models faster by installing NVIDIA/apex (instructions [here](https://github.com/NVIDIA/apex)), e.g.:
+```bash
+cd $BASE_DIR
+git clone https://github.com/NVIDIA/apex.git
+cd apex
+git reset --hard de6378f5da  # Optional step. We installed an older version of apex that was compatible with our PyTorch/CUDA versions above.
+export TORCH_CUDA_ARCH_LIST="6.0;6.1;6.2;7.0;7.5"  # optional, but helps to install apex in a way that is compatible with many different GPU types
+pip install -v --no-cache-dir --global-option="--cpp_ext" --global-option="--cuda_ext" --global-option="--deprecated_fused_adam" ./
+```
+If you run into installation errors with the above, look for your error in the [NVIDIA/apex](https://github.com/NVIDIA/apex) repo issues, or just skip apex installation for now, as it's not required to run our code.
+
 ## Reproducing our plots from cached training results
 
 You can compute MDL and reproduce all of our plots by downloading the [results](https://drive.google.com/file/d/1sWcjvOdNg_TEV4jWyY6lX2ToOomiEv9h/view) our of training runs (*skip this step if you'd like to train your own models*):
 ```bash
 # Function to google drive from terminal
 function gdrive_download () {
-  CONFIRM=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate "https://docs.google.com/uc?export=download&id=$
+  CONFIRM=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate "https://docs.google.com/uc?export=download&id=$1" -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')
   wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$CONFIRM&id=$1" -O $2
   rm -rf /tmp/cookies.txt
 }
@@ -101,7 +101,7 @@ EXP=clevr # Change to plot results for other datasets
 python scripts/plot_results.py --exp $EXP
 ```
 Likewise, plot our results for HotpotQA with `EXP=hotpot` and for e-SNLI with `EXP=esnli`.
-To plot GLUE/SNLI/ANLI results, set `EXP` to the ablation type (in order of plot appearance in our paper): `pos`, `gender`, `shuffle` (word order ablation), `content`, `causal`, `logical`, `gender_frequency_controlled`, `length`.
+To plot GLUE/SNLI/ANLI results, set `EXP` to the ablation type (in order of plot appearance in our paper): `pos`, `gender`, `shuffle`, `content`, `causal`, `logical`, `gender_frequency_controlled`, `length`.
 
 ## RDA on e-SNLI
 
@@ -159,7 +159,7 @@ The above script will save data to different folders `$BASE_DIR/data/$TN` where 
 </table>
 
 ### TODO: Check you can train fasttext models when installing as above
-Here is how you can train the FastText classifier on the same data (runs on CPU):
+Here is how you can train the FastText classifier on the same data (runs on CPU, requires ~40GB CPU memory):
 ```bash
 for PBN in 0 1 2 3 4 5 6 7; do
 for TN in "esnli.input-raw" "esnli.input-markedonly" "esnli.input-markedmasked" "esnli.input-markedunmasked" "esnli.input-marked" "esnli.input-raw,explanation" "esnli.input-explanation"; do
@@ -171,7 +171,7 @@ The above will train five FastText models with 5 different random seeds to evalu
 It will also tune the softamx temperature of FastText models automatically (via grid search, choosing the best tmeperature based on validation loss).
 The above will choose hyperparameters using FastText's autotune functionality and then use the chosen hyperparameters from the first random seed to train four additional models using different random seeds (for model training and data orderings for online/prequential coding).
 
-Here is how you can train the tranformer-based models that we trained for our e-SNLI experiments (runs on 1 GPU):
+Here is how you can train the transformer-based models that we trained for our e-SNLI experiments (runs on 1 GPU, required ~30GB CPU memory max):
 ```bash
 FOL=-1  # floating-point optimization level ("-1" for fp32, "2" for fp16 via apex)
 cd $BASE_DIR/transformers
@@ -293,7 +293,7 @@ Download the HotpotQA data, with/without subanswers from different decomposition
 ```bash
 # Function to google drive from terminal
 function gdrive_download () {
-  CONFIRM=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate "https://docs.google.com/uc?export=download&id=$
+  CONFIRM=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate "https://docs.google.com/uc?export=download&id=$1" -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')
   wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$CONFIRM&id=$1" -O $2
   rm -rf /tmp/cookies.txt
 }
@@ -339,7 +339,7 @@ The above will save data to different folders `$BASE_DIR/data/$TN` where the dat
 </tr>
 </table>
 
-Then, you can sweep over hyperparameters for pretrained Longformer BASE model on HotpotQA (with subanswers from the above decomposition methods) like so:
+Then, you can sweep over hyperparameters for pretrained Longformer BASE model on HotpotQA (with subanswers from the above decomposition methods):
 ```bash
 FOL=-1  # floating-point optimization level ("-1" for fp32, "2" for fp16 via apex)
 cd $BASE_DIR/transformers
@@ -362,8 +362,7 @@ done
 done
 done
 ```
-
-To train additional random seeds using the best hyperparameters from the above sweep, simply set `LR=0` (e.g., replace `for LR in 3e-5 5e-5 1e-4; do` with `for LR in 0; done`) and sweep over the `SEED` variable with a for loop (e.g., replace `for SEED in 12; do` with `for SEED in 20 21 22 23; do`).
+The above requires ~100GB of CPU memory max. To train additional random seeds using the best hyperparameters from the above sweep, simply set `LR=0` (e.g., replace `for LR in 3e-5 5e-5 1e-4; do` with `for LR in 0; done`) and sweep over the `SEED` variable with a for loop (e.g., replace `for SEED in 12; do` with `for SEED in 20 21 22 23; do`).
 Finally, compute MDL and plot/save results:
 ```bash
 python $BASE_DIR/scripts/plot_results.py --exp hotpot
@@ -476,10 +475,10 @@ Then, you can follow the instructions from earlier/above to answer subquestions 
 Install CUDA to run on GPU. We used CUDA 9.2 with GCC 6.3.0, but other versions should work as well.
 Then, setup a Python 3.7+ virtual environment. We [installed Anaconda 3](https://docs.anaconda.com/anaconda/install/) and created a Python 3.7 conda environment:
 ```bash
-conda create -n film python=3.7
+conda create -y -n film python=3.7
 conda activate film
 # Install PyTorch (instructions here: https://pytorch.org/). We used the below command:
-conda install pytorch=0.4.1 torchvision=0.2.1 cuda92 -c pytorch
+conda install -y pytorch=0.4.1 torchvision=0.2.1 cuda92 -c pytorch
 pip install -r requirements_film.txt
 cd $BASE_DIR/transformers
 pip install --editable .
