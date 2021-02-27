@@ -527,6 +527,7 @@ Next, you need to download and unpack the [CLEVR dataset](http://cs.stanford.edu
 cd $BASE_DIR/film
 wget https://dl.fbaipublicfiles.com/clevr/CLEVR_v1.0.zip -O data/CLEVR_v1.0.zip
 unzip data/CLEVR_v1.0.zip -d data
+rm data/CLEVR_v1.0.zip
 ```
 
 Extract ResNet-101 features for the CLEVR train and val images with the following commands:
