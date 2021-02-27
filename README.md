@@ -156,7 +156,7 @@ The above script will save data to different folders `$BASE_DIR/data/$TN` where 
 </tr>
 </table>
 
-Here is how you can train the FastText classifier on the same data (runs on CPU, requires ~40GB CPU memory):
+Here is how you can train the FastText classifier on the above data (runs on CPU, requires ~40GB CPU memory):
 ```bash
 for PBN in 0 1 2 3 4 5 6 7; do
 for TN in "esnli.input-raw" "esnli.input-markedonly" "esnli.input-markedmasked" "esnli.input-markedunmasked" "esnli.input-marked" "esnli.input-raw,explanation" "esnli.input-explanation"; do
@@ -164,17 +164,17 @@ python $BASE_DIR/scripts/train_fasttext_classifier.py --task_name $TN --prequent
 done
 done
 ```
-The above will train five FastText models with 5 different random seeds to evaluate codelengths (loss) for each block of the training data.
+The above will train five FastText models with different random seeds to evaluate codelengths (loss) for each trainin data block (numbered by `PBN` or prequential block number).
 It will also tune the softamx temperature of FastText models automatically (via grid search, choosing the best tmeperature based on validation loss).
-The above will choose hyperparameters using FastText's autotune functionality and then use the chosen hyperparameters from the first random seed to train four additional models using different random seeds (for model training and data orderings for online/prequential coding).
+The script above chooses hyperparameters using FastText's autotune functionality and then use the chosen hyperparameters from the first random seed to train four additional models using different random seeds (for model training and data orderings for online/prequential coding).
 
-Here is how you can train the transformer-based models that we trained for our e-SNLI experiments (runs on 1 GPU, required ~30GB CPU memory max):
+Here is how you can train the transformer-based models we used (runs on 1 GPU, requires ~30GB CPU memory max):
 ```bash
 FOL=-1  # floating-point optimization level ("-1" for fp32, "2" for fp16 via apex)
 cd $BASE_DIR/transformers
 for MN in "distilroberta-base" "distilgpt2" "roberta-base" "gpt2" "facebook/bart-base" "albert-base-v2" "roberta-large" "roberta-base.from_scratch" "roberta-large.from_scratch"; do
 for TN in "esnli.input-raw" "esnli.input-markedonly" "esnli.input-markedmasked" "esnli.input-markedunmasked" "esnli.input-marked" "esnli.input-raw,explanation" "esnli.input-explanation"; do
-python online_coding.py --mn $MN --tn $TN --max_pbn 7 --cpus 1  # NB: Increase --cpus if you have more available, for faster data loading and preprocessing
+python online_coding.py --mn $MN --tn $TN --max_pbn 7 --fp16_opt_level $FOL --cpus 1  # NB: Increase --cpus if you have more available, for faster data loading and preprocessing
 done
 done
 ```
@@ -219,7 +219,7 @@ For GLUE, download its datasets using the GLUE data download script:
 ```bash
 cd $BASE_DIR/data
 wget https://raw.githubusercontent.com/nyu-mll/jiant/093c556dc513583770ccad4b3f3daad6f37a7bda/scripts/download_glue_data.py
-python download_glue_data.py --data_dir data
+python download_glue_data.py --data_dir .
 rm download_glue_data.py
 for TN in "CoLA" "MNLI" "MRPC" "QNLI" "QQP" "RTE" "SNLI" "SST-2" "STS-B" "WNLI"; do
     mv $TN $(echo "$TN" | tr '[:upper:]' '[:lower:]')  # lowercase data directory names
@@ -481,11 +481,29 @@ conda activate film
 # Install PyTorch (instructions here: https://pytorch.org/). We used the below command:
 conda install -y pytorch=0.4.1 torchvision=0.2.1 cuda92 -c pytorch
 pip install -r requirements_film.txt
-cd $BASE_DIR/film
 ```
 
-Next, follow the instructions for [Preprocessing CLEVR](https://github.com/facebookresearch/clevr-iep/blob/master/TRAINING.md) to save the data into `$BASE_DIR/film/data/CLEVR_v1.0`.
-This process takes some time, because there are a large number of image files to download, unzip, and extract features for using a pretrained ImageNet model.
+Next, you need to download and unpack the [CLEVR dataset](http://cs.stanford.edu/people/jcjohns/clevr/) into `$BASE_DIR/film/data`:
+```bash
+cd $BASE_DIR/film
+wget https://dl.fbaipublicfiles.com/clevr/CLEVR_v1.0.zip -O data/CLEVR_v1.0.zip
+unzip data/CLEVR_v1.0.zip -d data
+```
+
+Extract ResNet-101 features for the CLEVR train, val, and test images with the following commands:
+```bash
+python scripts/extract_features.py \
+  --input_image_dir data/CLEVR_v1.0/images/train \
+  --output_h5_file data/train_features.h5
+
+python scripts/extract_features.py \
+  --input_image_dir data/CLEVR_v1.0/images/val \
+  --output_h5_file data/val_features.h5
+
+python scripts/extract_features.py \
+  --input_image_dir data/CLEVR_v1.0/images/test \
+  --output_h5_file data/test_features.h5
+```
 
 Next, find the three subsets of CLEVR questions that we use in our paper and append answers to subquestions to the CLEVR question:
 ```bash
@@ -495,7 +513,7 @@ cd CLEVR_1.0_templates
 for QTYPE in "comparison" "compare_integer" "same_relate"; do
     wget https://raw.githubusercontent.com/facebookresearch/clevr-dataset-gen/master/question_generation/CLEVR_1.0_templates/$QTYPE.json
 done
-python $BASE_DIR/clevr.format_data.py  # Takes ~5 minutes
+python $BASE_DIR/scripts/clevr.format_data.py  # Takes ~5 minutes
 ```
 
 Then, preprocess the question files generated above:
