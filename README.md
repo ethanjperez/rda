@@ -160,7 +160,7 @@ Here is how you can train the FastText classifier on the above data (runs on CPU
 ```bash
 for PBN in 0 1 2 3 4 5 6 7; do
 for TN in "esnli.input-raw" "esnli.input-markedonly" "esnli.input-markedmasked" "esnli.input-markedunmasked" "esnli.input-marked" "esnli.input-raw,explanation" "esnli.input-explanation"; do
-python $BASE_DIR/scripts/train_fasttext_classifier.py --task_name $TN --prequential_block_no $PBN --autotune_duration 7200 --seeds 12 20 21 22 23
+    python $BASE_DIR/scripts/train_fasttext_classifier.py --task_name $TN --prequential_block_no $PBN --autotune_duration 7200 --seeds 12 20 21 22 23
 done
 done
 ```
@@ -174,7 +174,7 @@ FOL=-1  # floating-point optimization level ("-1" for fp32, "2" for fp16 via ape
 cd $BASE_DIR/transformers
 for MN in "distilroberta-base" "distilgpt2" "roberta-base" "gpt2" "facebook/bart-base" "albert-base-v2" "roberta-large" "roberta-base.from_scratch" "roberta-large.from_scratch"; do
 for TN in "esnli.input-raw" "esnli.input-markedonly" "esnli.input-markedmasked" "esnli.input-markedunmasked" "esnli.input-marked" "esnli.input-raw,explanation" "esnli.input-explanation"; do
-python online_coding.py --mn $MN --tn $TN --max_pbn 7 --fp16_opt_level $FOL --cpus 1  # NB: Increase --cpus if you have more available, for faster data loading and preprocessing
+    python online_coding.py --mn $MN --tn $TN --max_pbn 7 --fp16_opt_level $FOL --cpus 1  # NB: Increase --cpus if you have more available, for faster data loading and preprocessing
 done
 done
 ```
@@ -184,7 +184,7 @@ In practice, you'll probably want to parallelize calls to `online_coding.py` for
 The GPU batch size has also been tuned for a 48GB GPU, so if you have less memory, please reduce the maximum GPU batch size (i.e., that can fit in a single forward pass).
 You can do so by changing the `mn2max_tbs` variable at the top of `$BASE_DIR/scripts/rda_utils.py`, from which we load the maximum training batch sizes for different models.
 The code will accumulate gradients such that you will train with the same effective batch size, regardless of your GPU batch size.
- 
+
 The below command will tune temperatures (parallelized across CPU cores) for all transformer-based models trained above:
 ```bash
 python $BASE_DIR/scripts/tune_temperature_parallelized.py --group esnli
@@ -247,7 +247,7 @@ Create the ablated versions of the original data that we test in our paper (mask
 cd $BASE_DIR/scripts
 TN="cola"
 for SPLIT in "train" "dev" "test"; do
-python dataset_ablations.py --task $TN --split $SPLIT --shard_no $SHARD_NO --num_shards $NUM_SHARDS
+    python dataset_ablations.py --task $TN --split $SPLIT --shard_no $SHARD_NO --num_shards $NUM_SHARDS
 done
 ```
 
@@ -256,11 +256,11 @@ Here, we'll show how to train models on the original vs. word-shuffled text (use
 Just use a different task name (`TN`) for other dataset ablations, matching the name of the ablation's directory.
 For example, to train of CoLA with (1) input nouns masked use `TN=cola.mask_noun` and (2) the same fraction of input words use `TN=cola.mask_noun_fraction`.
 
-You can train FastText models on the above data in the same way as for e-SNLI above (just updating `TN`):
+You can train FastText models on the above data in the same way as for e-SNLI above (just updating `TN`, which points to the task and training data located at `data/$TN`):
 ```bash
 for PBN in 0 1 2 3 4 5 6 7; do
 for TN in "cola" "cola.shuffle"; do
-python $BASE_DIR/scripts/train_fasttext_classifier.py --task_name $TN --prequential_block_no $PBN --autotune_duration 7200
+    python $BASE_DIR/scripts/train_fasttext_classifier.py --task_name $TN --prequential_block_no $PBN --autotune_duration 7200
 done
 done
 ```
@@ -270,7 +270,7 @@ Similarly, train transformer-based models with:
 cd $BASE_DIR/transformers
 for MN in "distilroberta-base" "distilgpt2" "roberta-base" "gpt2" "facebook/bart-base" "albert-base-v2" "roberta-large" "roberta-base.from_scratch" "roberta-large.from_scratch"; do
 for TN in "cola" "cola.shuffle"; do
-python online_coding.py --mn $MN --tn $TN --max_pbn 7 --cpus 1  # NB: Increase --cpus if you have more available, for faster data loading and preprocessing
+    python online_coding.py --mn $MN --tn $TN --max_pbn 7 --cpus 1  # NB: Increase --cpus if you have more available, for faster data loading and preprocessing
 done
 done
 ```
@@ -283,10 +283,50 @@ Finally, compute MDL using the codelengths obtained from above and save plots to
 ```bash
 python scripts/plot_results.py --exp shuffle --task_types cola
 ```
-### TODO: Check that above works
-### TODO: Add instructions for using `plot_results.py` in general (different seeds, task_types, etc.)
-### TODO: Make table showing what each of the ablation names are and what ablations you need to generate a full plot in our paper
-### TODO: Elaborate on how to reproduce other results
+As before, you can choose which random seeds you use for evaluation with the `--seeds` flag (e.g., `--seeds 12`).
+You can plot results for multiple tasks by listing them to `--task_types` (e.g., `--task_types cola snli anli.round1`).
+You'll need to use our cached training results (as described [earlier](https://github.com/ethanjperez/rda#reproducing-our-plots-from-cached-training-results)) or train your own models on these tasks.
+Below is a table that lists the task names (`TN`) you'll need to train models on, to plot the results for our different ablation experiments, where `$TASK` is dataset (`cola`, `snli`, `anli.round`, etc.):
+<table>
+<tr>
+    <td><b> Experiment Type (--exp) </b></td>
+    <td><b> Training Task Names (TN) Required </b></td>
+</tr>
+<tr>
+    <td> shuffle </td>
+    <td> $TASK $TASK.shuffle (example for cola above) </td>
+</tr>
+<tr>
+    <td> pos </td>
+    <td> $TASK $TASK.noun $TASK.noun_fraction $TASK.verb $TASK.verb_fraction $TASK.adj $TASK.adj_fraction $TASK.adv $TASK.adv_fraction $TASK.pos $TASK.pos_fraction </td>
+</tr>
+<tr>
+    <td> gender gender_frequency_controlled </td>
+    <td> $TASK $TASK.mask_male_words $TASK.mask_male_words_fraction $TASK.mask_female_words $TASK.mask_female_words_fraction </td>
+</tr>
+<tr>
+    <td> content </td>
+    <td> $TASK $TASK.content_pos_words $TASK.content_pos_words_fraction </td>
+</tr>
+<tr>
+    <td> causal </td>
+    <td> $TASK $TASK.causal_words $TASK.causal_words_fraction </td>
+</tr>
+<tr>
+    <td> logical </td>
+    <td> $TASK $TASK.logical_words $TASK.logical_words_fraction </td>
+</tr>
+<tr>
+    <td> length </td>
+    <td> $TASK $TASK.length </td>
+</tr>
+</table>
+
+`$TASK` indicates the normal dataset (no words removed), located at `$BASE_DIR/data/$TASK`.
+`$TASK.$ABLATION` indicates that same dataset with words of type `$ABLATION` removed (e.g., nouns removed for `cola.mask_noun`).
+`$TASK.$ABLATION_fraction` (e.g., `cola.mask_noun_fraction`) indicates a dataset `$TASK` where input words are masked uniformly at random, with the same frequency as the corresponding ablation `$TASK.$ABLATION` (e.g., cola.mask_noun).
+For `mnli` and `snli` ablation runs (with or without random masking), you'll also need to prefix the task name `TN` with `nli` and postfix with `v2` to match our setup and cached training results.
+For example, to train on `mnli` with nouns masked, set `TN=nli.mnli.mask_noun.v2`.
 
 ## RDA on HotpotQA
 
@@ -352,12 +392,12 @@ for TN in "hotpot.context-long.num_subas-0.shuffled-1" "hotpot.context-long.subq
 for PBN in 0 1 2 3 4 5 6 7; do
 for SEED in 12; do
 for LR in 3e-5 5e-5 1e-4; do
-GAS=$((((BS-1)/MAX_TBS)+1))
-TBS=$((BS/GAS))
-OUTPUT_DIR="checkpoint/rda/tn-$TN.mn-$MN.bs-$BS.lr-$LR.nte-$NTE.seed-$SEED.pbn-$PBN"
-CPUS=4  # Number of CPU available on your system (e.g., for data loading/processing)
-mkdir -p $OUTPUT_DIR
-python examples/question-answering/run_squad.py --model_type longformer --model_name_or_path $MN --data_dir data/$TN --do_train --do_eval --dev_file dev1.json --test_file dev2.json --fp16_opt_level $FOL --output_dir $OUTPUT_DIR --per_gpu_train_batch_size $TBS --per_gpu_eval_batch_size $((2*TBS)) --gradient_accumulation_steps $GAS --learning_rate $LR --max_seq_length 4096 --doc_stride 1024 --seed $SEED --max_grad_norm inf --adam_epsilon 1e-6 --weight_decay 0.01 --warmup_proportion 0.06 --num_train_epochs $NTE --threads $CPUS --logging_steps 1 --prequential_block_no $PBN --early_stopping --evaluate_loss --overwrite_output_dir
+    GAS=$((((BS-1)/MAX_TBS)+1))
+    TBS=$((BS/GAS))
+    OUTPUT_DIR="checkpoint/rda/tn-$TN.mn-$MN.bs-$BS.lr-$LR.nte-$NTE.seed-$SEED.pbn-$PBN"
+    CPUS=4  # Number of CPU available on your system (e.g., for data loading/processing)
+    mkdir -p $OUTPUT_DIR
+    python examples/question-answering/run_squad.py --model_type longformer --model_name_or_path $MN --data_dir data/$TN --do_train --do_eval --dev_file dev1.json --test_file dev2.json --fp16_opt_level $FOL --output_dir $OUTPUT_DIR --per_gpu_train_batch_size $TBS --per_gpu_eval_batch_size $((2*TBS)) --gradient_accumulation_steps $GAS --learning_rate $LR --max_seq_length 4096 --doc_stride 1024 --seed $SEED --max_grad_norm inf --adam_epsilon 1e-6 --weight_decay 0.01 --warmup_proportion 0.06 --num_train_epochs $NTE --threads $CPUS --logging_steps 1 --prequential_block_no $PBN --early_stopping --evaluate_loss --overwrite_output_dir
 done
 done
 done
@@ -376,7 +416,6 @@ python $BASE_DIR/scripts/plot_results.py --exp hotpot --seeds 12
 
 ### Answering Subquestions
 
-#### TODO: Check data setup details below
 Here, you can see how to answer subquestions (from [ONUS](https://arxiv.org/abs/2002.09758)) with a pretrained SQuAD (as we did) and add the subanswers (paragraph markings) to HotpotQA input paragraphs.
 These instructions are useful if you have your own subquestions that you'd like to test.
 First, setup the Unsupervised Question Decomposition [repo](https://github.com/facebookresearch/UnsupervisedDecomposition), cloning the repo into `$BASE_DIR/`, e.g.:
@@ -490,7 +529,7 @@ wget https://dl.fbaipublicfiles.com/clevr/CLEVR_v1.0.zip -O data/CLEVR_v1.0.zip
 unzip data/CLEVR_v1.0.zip -d data
 ```
 
-Extract ResNet-101 features for the CLEVR train, val, and test images with the following commands:
+Extract ResNet-101 features for the CLEVR train and val images with the following commands:
 ```bash
 python scripts/extract_features.py \
   --input_image_dir data/CLEVR_v1.0/images/train \
@@ -499,10 +538,6 @@ python scripts/extract_features.py \
 python scripts/extract_features.py \
   --input_image_dir data/CLEVR_v1.0/images/val \
   --output_h5_file data/val_features.h5
-
-python scripts/extract_features.py \
-  --input_image_dir data/CLEVR_v1.0/images/test \
-  --output_h5_file data/test_features.h5
 ```
 
 Next, find the three subsets of CLEVR questions that we use in our paper and append answers to subquestions to the CLEVR question:
@@ -521,11 +556,11 @@ Then, preprocess the question files generated above:
 cd $BASE_DIR/film
 for num_sas in 0 1 2; do
 for QTYPE in "comparison" "compare_integer" "same_relate"; do
-questions_dirname="questions.$QTYPE.num_sas-$num_sas"
-if [[ "$questions_dirname" != "questions.same_relate.num_sas-2" ]]; then
-mkdir -p "data/CLEVR_v1.0/$questions_dirname"
-sh scripts/preprocess.sh $questions_dirname
-fi
+    questions_dirname="questions.$QTYPE.num_sas-$num_sas"
+    if [[ "$questions_dirname" != "questions.same_relate.num_sas-2" ]]; then
+        mkdir -p "data/CLEVR_v1.0/$questions_dirname"
+        sh scripts/preprocess.sh $questions_dirname
+    fi
 done
 done
 ```
@@ -541,11 +576,11 @@ for SEED in 12 20 21 22 23; do
 for TN in "clevr.comparison.num_sas-$SAS" "clevr.compare_integer.num_sas-$SAS" "clevr.same_relate.num_sas-$SAS"; do
 for SAS in 0 1 2; do
 for PBN in 0 1 2 3 4 5 6 7; do
-if [[ "$TN" != "clevr.same_relate.num_sas-2" ]]; then
-OUTPUT_DIR="exp/rda/tn-$TN.mn-$MN.bs-$BS.lr-$LR.nte-$NTE.seed-$SEED.pbn-$PBN"
-mkdir -p $OUTPUT_DIR
-sh scripts/train/film_prequential.sh $TN $MN $BS $LR $NTE $SEED $PBN
-fi
+    if [[ "$TN" != "clevr.same_relate.num_sas-2" ]]; then
+        OUTPUT_DIR="exp/rda/tn-$TN.mn-$MN.bs-$BS.lr-$LR.nte-$NTE.seed-$SEED.pbn-$PBN"
+        mkdir -p $OUTPUT_DIR
+        sh scripts/train/film_prequential.sh $TN $MN $BS $LR $NTE $SEED $PBN
+    fi
 done
 done
 done
