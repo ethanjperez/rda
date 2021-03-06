@@ -9,8 +9,8 @@ This repo includes a simple tutorial on how to run RDA on any dataset with any m
 The code in the tutorial lets you run RDA without *any dependencies* beyond those included in Python, plus those required to download your dataset / train your model.
 In our tutorial, we show how to run RDA on a GLUE dataset (MRPC) by training BERT models, and you'll just need to change a few lines of code to run RDA on another dataset with another model.
 The tutorial is our recommended way to learn about how to use RDA with your own dataset and models. 
-We've also converted the tutorial to a [Python script](https://github.com/ethanjperez/rda/blob/main/rda.py) to run RDA via command line (instructions [here]()).
-The rest of the repo includes the code and instructions to reproduce our results, as well as our precomputed results that we used to produce our paper's plots (overview [here]()).
+We've also converted the tutorial to a [Python script](https://github.com/ethanjperez/rda/blob/main/rda.py) to run RDA via command line (instructions [here](https://github.com/ethanjperez/rda#rda-demo-script)).
+The rest of the repo includes the code and instructions to reproduce our results, as well as our precomputed results that we used to produce our paper's plots (overview [here](https://github.com/ethanjperez/rda#reproducing-our-results)).
 
 ## RDA Demo Script
 
