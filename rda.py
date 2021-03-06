@@ -33,25 +33,25 @@ def save_data(examples, save_file):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument("--training_args", default='', type=str, help="Training arguments to pass to the model training function,"
-                        "e.g., --learning rate 3e-5 --train_file TRAIN_FILE --validation_file VALIDATION_FILE --test_file TEST_FILE'."
-                        "Must contain 'TRAIN_FILE', 'VALIDATION_FILE', and 'TEST_FILE', as these strings will be replaced by the filepaths"
+    parser.add_argument("--training_args", default='', type=str, help="Training arguments to pass to the model training function, "
+                        "e.g., --learning rate 3e-5 --train_file TRAIN_FILE --validation_file VALIDATION_FILE --test_file TEST_FILE'. "
+                        "Must contain 'TRAIN_FILE', 'VALIDATION_FILE', and 'TEST_FILE', as these strings will be replaced by the filepaths "
                         "for train/valid/test data when training models on different data blocks.")
-    parser.add_argument("--data_dir", default='data', type=str, help="The directory in which RDA train/val/test data will be saved."
+    parser.add_argument("--data_dir", default='data', type=str, help="The directory in which RDA train/val/test data will be saved. "
                         "If your load_data function requires a data path, this directory should also contain the original data you would like to analyze.")
     parser.add_argument("--data_file_ext", default='json', type=str, help="File extension for saved RDA train/val/test data.")
-    parser.add_argument("--num_blocks", default=9, type=int, help="The number of blocks N sent when calculating rda code length"
+    parser.add_argument("--num_blocks", default=9, type=int, help="The number of blocks N sent when calculating rda code length "
                         "(trains N-1 models, as the first block is sent with a uniform prior).")
-    parser.add_argument("--min_num_train_samples", default=64, type=int, help="The minimum number of examples to train with.")
+    parser.add_argument("--min_num_train_samples", default=64, type=int, help="The minimum number of examples to train with. ")
     parser.add_argument("--max_num_train_samples", default=float('inf'), type=int, help="The maximum number of examples to use. 0 for all examples.")
     parser.add_argument("--val_frac", default=0.1, type=float, help="The fraction of training examples to split off for validation.")
     parser.add_argument("--seed", default=0, type=int, help="The random seed to use for online coding (e.g., for randomly ordering examples).")
-    parser.add_argument("--label_range", required=True, type=float, help="For tasks with a discrete output space (e.g., classification or span prediction),"
-                        "use the number of possible output classes. For regression, use the size of the interval over which outputs can range, e.g.,"
-                        "3.5 if the range is [1., 4.5]. This value is used to calculate the codelength for sending the first block using the uniform prior."
+    parser.add_argument("--label_range", required=True, type=float, help="For tasks with a discrete output space (e.g., classification or span prediction), "
+                        "use the number of possible output classes. For regression, use the size of the interval over which outputs can range, e.g., "
+                        "3.5 if the range is [1., 4.5]. This value is used to calculate the codelength for sending the first block using the uniform prior. "
                         "For regression, the size of the interval over which outputs can range, e.g., 3.5 if the range is [1., 4.5]")
-    parser.add_argument("--mse", default=False, action="store_true", help="Use this flag if returning mean-squared error (MSE)"
-                        "instead of negative log-likelihood (we'll convert MSE values to NLL). Please do not divide MSE values by 2,"
+    parser.add_argument("--mse", default=False, action="store_true", help="Use this flag if returning mean-squared error (MSE) "
+                        "instead of negative log-likelihood (we'll convert MSE values to NLL). Please do not divide MSE values by 2, "
                         "i.e., just return the average value of (y' - y) ^ 2, where y is the true label and y' is the predicted label.")
     args = parser.parse_args()
 
