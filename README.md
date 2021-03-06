@@ -35,6 +35,13 @@ Then, you can evaluate the MDL of the MRPC dataset by running:
 python rda.py --label_range 2 --data_dir $HOME/data/rda/mrpc --training_args "--model_name_or_path bert-base-cased --do_train --do_eval --max_seq_length 128 --per_device_train_batch_size 32 --learning_rate 2e-5 --num_train_epochs 3 --output_dir $HOME/checkpoint/mrpc --train_file TRAIN_FILE --validation_file VALIDATION_FILE --test_file TEST_FILE --overwrite_output_dir"
 ```
 
+You can see a detailed description of the possible command line arguments with:
+```bash
+python rda.py -h
+```
+The descriptions are useful if you would like to run on another task (e.g., regression instead of classification) or want to change the settings for RDA (e.g., number of blocks, minimum/maximum number of examples used, model training hyperparameters, etc.).
+
+
 ## Reproducing Our Results
 
 Below, we will step through the procedure we used to produce our results.
