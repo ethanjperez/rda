@@ -1,7 +1,7 @@
 # Rissanen Data Analysis
 
 <p align="center">
-  <img src="rda.png" width="150">
+  <img src="rda.png" width="500">
 </p>
 
 Below, we will step through the procedure we used to produce our results.
