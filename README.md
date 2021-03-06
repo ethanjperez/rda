@@ -6,16 +6,16 @@
 
 Rissanen Data Analysis (RDA) is a method to determine what capabilities are helpful to solve a dataset.
 This repo includes a simple tutorial on how to run RDA on any dataset with any model of your choice ([![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ethanjperez/rda/blob/master/rda.ipynb) or [view on GitHub](https://github.com/ethanjperez/rda/blob/main/rda.ipynb)).
-The code in the tutorial lets you run RDA without *any dependencies* beyond those included in Python and those required to download your dataset and train your model.
+The code in the tutorial lets you run RDA without *any dependencies* beyond those included in Python, plus those required to download your dataset / train your model.
 In our tutorial, we show how to run RDA on a GLUE dataset (MRPC) by training BERT models, and you'll just need to change a few lines of code to run RDA on another dataset with another model.
 The tutorial is our recommended way to learn about how to use RDA with your own dataset and models. 
-We've also converted the tutorial to a [Python script](https://github.com/ethanjperez/rda/blob/main/rda.py), to run RDA via command line (you can jump to our instructions for this script [here]()).
-The rest of the repo includes the code and instructions to reproduce our results, as well as our precomputed results that we used to produce our paper's plots (jump to an overview [here]()).
+We've also converted the tutorial to a [Python script](https://github.com/ethanjperez/rda/blob/main/rda.py) to run RDA via command line (instructions [here]()).
+The rest of the repo includes the code and instructions to reproduce our results, as well as our precomputed results that we used to produce our paper's plots (overview [here]()).
 
 ## RDA Demo Script
 
-Here, we describe how to use `rda.py` to run our tutorial RDA code from command line to evaluate the minimum description length of MRPC using BERT.
-Please see the comments in [rda.py](https://github.com/ethanjperez/rda/blob/main/rda.py) or our notebook tutorial ([![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ethanjperez/rda/blob/master/rda.ipynb) or [view on GitHub](https://github.com/ethanjperez/rda/blob/main/rda.ipynb)) for a detailed explanation of the code in the script and where to modify the code to run with different datasets and models.
+Here, we describe how to use `rda.py` to run our tutorial RDA code from command line to evaluate the Minimum Description Length (MDL) of MRPC using BERT.
+Please see our [notebook tutorial](https://github.com/ethanjperez/rda/blob/main/rda.ipynb) ([![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ethanjperez/rda/blob/master/rda.ipynb)) for a detailed explanation of the code in the script and where to modify the code to run with different datasets and models.
 
 To run `rda.py`, please install the below dependencies for the demo (not required for RDA in general), in a fresh virtual environment:
 ```bash
@@ -28,9 +28,8 @@ pip install git+https://github.com/ethanjperez/transformers_rda.git
 Download the `rda.py` file into your current working directory:
 ```bash
 wget https://raw.githubusercontent.com/ethanjperez/rda/main/rda.py
-```
-Cloning this repo and changing directories to `rda/` will also work. 
-Then, you can evaluate the MDL of the MRPC dataset by running:
+``` 
+Then, evaluate the MDL of MRPC:
 ```bash
 python rda.py --label_range 2 --data_dir $HOME/data/rda/mrpc --training_args "--model_name_or_path bert-base-cased --do_train --do_eval --max_seq_length 128 --per_device_train_batch_size 32 --learning_rate 2e-5 --num_train_epochs 3 --output_dir $HOME/checkpoint/mrpc --train_file TRAIN_FILE --validation_file VALIDATION_FILE --test_file TEST_FILE --overwrite_output_dir"
 ```
