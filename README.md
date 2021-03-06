@@ -1,6 +1,8 @@
 # Rissanen Data Analysis
 
-![alt text](https://raw.githubusercontent.com/ethanjperez/rda/master/rda.png)
+<p align="center">
+  <img src="rda.png" width="150">
+</p>
 
 Below, we will step through the procedure we used to produce our results.
 To see how we train a model on dataset, please skim through the README to see the bash snippet and python script we use to train that model.
