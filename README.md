@@ -1,8 +1,41 @@
+<p align="center">
+  <img src="rda.png" width="450">
+</p>
+
 # Rissanen Data Analysis
 
-<p align="center">
-  <img src="rda.png" width="500">
-</p>
+Rissanen Data Analysis (RDA) is a method to determine what capabilities are helpful to solve a dataset.
+This repo includes a simple tutorial on how to run RDA on any dataset with any model of your choice ([![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ethanjperez/rda/blob/master/rda.ipynb) or [view on GitHub](https://github.com/ethanjperez/rda/blob/main/rda.ipynb)).
+The code in the tutorial lets you run RDA without *any dependencies* beyond those included in Python and those required to download your dataset and train your model.
+In our tutorial, we show how to run RDA on a GLUE dataset (MRPC) by training BERT models, and you'll just need to change a few lines of code to run RDA on another dataset with another model.
+The tutorial is our recommended way to learn about how to use RDA with your own dataset and models. 
+We've also converted the tutorial to a [Python script](https://github.com/ethanjperez/rda/blob/main/rda.py), to run RDA via command line (you can jump to our instructions for this script [here]()).
+The rest of the repo includes the code and instructions to reproduce our results, as well as our precomputed results that we used to produce our paper's plots (jump to an overview [here]()).
+
+## RDA Demo Script
+
+Here, we describe how to use `rda.py` to run our tutorial RDA code from command line to evaluate the minimum description length of MRPC using BERT.
+Please see the comments in [rda.py](https://github.com/ethanjperez/rda/blob/main/rda.py) or our notebook tutorial ([![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ethanjperez/rda/blob/master/rda.ipynb) or [view on GitHub](https://github.com/ethanjperez/rda/blob/main/rda.ipynb)) for a detailed explanation of the code in the script and where to modify the code to run with different datasets and models.
+
+To run `rda.py`, please install the below dependencies for the demo (not required for RDA in general), in a fresh virtual environment:
+```bash
+# Install HuggingFace datasets to load GLUE datasets / MRPC
+pip install datasets
+# Install a version of HuggingFace transformers, modified to return test loss after model training 
+pip install git+https://github.com/ethanjperez/transformers_rda.git
+```
+
+Download the `rda.py` file into your current working directory:
+```bash
+wget https://raw.githubusercontent.com/ethanjperez/rda/main/rda.py
+```
+Cloning this repo and changing directories to `rda/` will also work. 
+Then, you can evaluate the MDL of the MRPC dataset by running:
+```bash
+python rda.py --label_range 2 --data_dir $HOME/data/rda/mrpc --training_args "--model_name_or_path bert-base-cased --do_train --do_eval --max_seq_length 128 --per_device_train_batch_size 32 --learning_rate 2e-5 --num_train_epochs 3 --output_dir $HOME/checkpoint/mrpc --train_file TRAIN_FILE --validation_file VALIDATION_FILE --test_file TEST_FILE --overwrite_output_dir"
+```
+
+## Reproducing Our Results
 
 Below, we will step through the procedure we used to produce our results.
 To see how we train a model on dataset, please skim through the README to see the bash snippet and python script we use to train that model.
@@ -14,7 +47,7 @@ To see how we compute minimum description length after training our models, plea
 - `scripts/`: All other code for reproducing our results, including code for formatting data (including adding subquestions/subanswers, adding explanations/rationales, ablating data, etc.), training FastText models, tuning model temperature, evaluating MDL / plotting results, and computing other statistics we report
 - `gender_words_list.csv`: The list of gendered words that we used for gender bias evaluation, originally from these [two](https://www.aclweb.org/anthology/2020.emnlp-main.656/) [papers](https://www.aclweb.org/anthology/2020.emnlp-main.23/)
 
-## Initial Setup
+### Initial Setup
 
 Clone this repo, then step into the directory and set its path to be `BASE_DIR`, your main working directory:
 ```bash
@@ -30,7 +63,7 @@ mkdir $BASE_DIR/checkpoint  # or symlink to another location that can hold large
 mkdir $BASE_DIR/checkpoint/rda  # subdirectory where we'll save most results
 ```
 
-## Installing Dependencies
+### Installing Dependencies
 
 To run experiments on CLEVR, please jump to [RDA on CLEVR](https://github.com/ethanjperez/rda#rda-on-clevr). Otherwise, continue below. 
 Setup a Python 3.7+ virtual environment. We [installed Anaconda 3](https://docs.anaconda.com/anaconda/install/) and created a Python 3.7 conda environment:
@@ -79,7 +112,7 @@ pip install -v --no-cache-dir --global-option="--cpp_ext" --global-option="--cud
 ```
 If you run into installation errors with the above, look for your error in the [NVIDIA/apex](https://github.com/NVIDIA/apex) repo issues, or just skip apex installation for now, as it's not required to run our code.
 
-## Reproducing our plots from cached training results
+### Reproducing our plots from cached training results
 
 You can compute MDL and reproduce all of our plots by downloading the [results](https://drive.google.com/file/d/1sWcjvOdNg_TEV4jWyY6lX2ToOomiEv9h/view) our of training runs (*skip this step if you'd like to train your own models*):
 ```bash
@@ -107,7 +140,7 @@ python $BASE_DIR/scripts/plot_results.py --exp clevr
 Likewise, plot our results for HotpotQA with `--exp hotpot` and for e-SNLI with `--exp esnli`.
 To plot GLUE/SNLI/ANLI results, set `--exp` to the ablation type (in order of plot appearance in our paper): `pos`, `gender`, `shuffle`, `content`, `causal`, `logical`, `gender_frequency_controlled`, `length`.
 
-## RDA on e-SNLI
+### RDA on e-SNLI
 
 Download and format (e-)SNLI for model training (with explanations or rationales or neither):
 ```bash
@@ -215,7 +248,7 @@ To compute the results over different (e.g., fewer) random seeds:
 python scripts/plot_results.py --exp esnli --seeds 12 20 21
 ```
 
-## RDA on GLUE/ANLI/SNLI
+### RDA on GLUE/ANLI/SNLI
 
 For SNLI, we use the downloaded and formatted data from the e-SNLI section above (saved to `$BASE_DIR/data/esnli.input-raw`).
 
@@ -332,7 +365,7 @@ Below is a table that lists the task names (`TN`) you'll need to train models on
 For `mnli` and `snli` ablation runs (with or without random masking), you'll also need to prefix the task name `TN` with `nli` and postfix with `v2` to match our setup and cached training results.
 For example, to train on `mnli` with nouns masked, set `TN=nli.mnli.mask_noun.v2`.
 
-## RDA on HotpotQA
+### RDA on HotpotQA
 
 Download the HotpotQA data, with/without subanswers from different decomposition methods as follows (located on Google drive [here](https://drive.google.com/file/d/1QFMJSH5fB_OPH4xoDhvjyAWoUsLQIImw/view)):
 ```bash
@@ -418,7 +451,7 @@ As before, you can control which random seeds you use for evaluation with the `-
 python $BASE_DIR/scripts/plot_results.py --exp hotpot --seeds 12
 ```
 
-### Answering Subquestions
+#### Answering Subquestions
 
 Here, you can see how to answer subquestions (from [ONUS](https://arxiv.org/abs/2002.09758)) with a pretrained SQuAD (as we did) and add the subanswers (paragraph markings) to HotpotQA input paragraphs.
 These instructions are useful if you have your own subquestions that you'd like to test.
@@ -465,7 +498,7 @@ python $BASE_DIR/scripts/hotpot.format_data.py --model_no $MODEL_NO --split $SPL
 ```
 
 
-### Distilled Language Model Decompositions
+#### Distilled Language Model Decompositions
 
 Here, we include details on how to train a Distilled Language Model (DLM).
 You'll need to include your own language model decompositions for training data, where each input example is formatted on a new line and each output is on a new line (with the same line number as the corresponding input).
@@ -514,7 +547,7 @@ python $BASE_DIR/scripts/hotpot.postprocess_dlm_decompositions.py --gen_path $GE
 Then, you can follow the instructions from earlier/above to answer subquestions and add subanswers to input paragraphs.
 
 
-## RDA on CLEVR
+### RDA on CLEVR
 
 Install CUDA to run on GPU. We used CUDA 9.2 with GCC 6.3.0, but other versions should work as well.
 Then, setup a Python 3.7+ virtual environment. We [installed Anaconda 3](https://docs.anaconda.com/anaconda/install/) and created a Python 3.7 conda environment:
@@ -606,7 +639,7 @@ TN="clevr-compare_integer"  # in {clevr-compare_integer,clevr-comparison,clevr-s
 python scripts/plot_results.py --exp clevr --task_types $TN
 ```
 
-## Other Scripts
+### Other Scripts
 
 To compute `H(y)` (the label entropy baseline) for CLEVR, run:
 ```bash

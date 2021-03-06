@@ -3,7 +3,10 @@ import math
 import os
 import random
 import sys
-import transformers.run_glue as train_model  # transformers only required for demo purposes - change import to load a training function for other models
+
+# For this demo, the transformers library should be installed via `pip install git+https://github.com/ethanjperez/transformers_rda.git`
+# Note that transformers only required for demo purposes - change import to load a training function for other models
+import transformers.run_glue as train_model
 
 
 def load_data(data_dir):
