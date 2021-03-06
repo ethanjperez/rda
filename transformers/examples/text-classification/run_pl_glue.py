@@ -193,8 +193,8 @@ class GLUETransformer(BaseTransformer):
     @staticmethod
     def add_model_specific_args(parser, root_dir):
         BaseTransformer.add_model_specific_args(parser, root_dir)
-        parser.add_argument("--prequential_block_no", default=None, type=int, help="The number of blocks sent when calculating prequential code length (number of models to train). "
-                            "Use -1 for --preprocess_only and --prequential_num_blocks value to train on all prequential code examples and evaluate on test.")
+        parser.add_argument("--prequential_block_no", default=None, type=int, help="The number/index of the block to send when calculating prequential code length. "
+                            "Use -1 for --preprocess_only and use the value for --prequential_num_blocks to train on all prequential code examples and evaluate on test.")
         parser.add_argument("--prequential_num_blocks", default=8, type=int, help="The number of blocks sent when calculating prequential code length (number of models to train).")
         parser.add_argument("--prequential_min_block_size", default=64, type=int, help="The minimum number of examples to use in a training block (inclusive).")
         parser.add_argument("--prequential_max_block_size", default=10000, type=int, help="The maximum number of examples to use in a training block (exclusive). -1 for all examples.")
