@@ -4,7 +4,7 @@
 
 # Rissanen Data Analysis
 
-Rissanen Data Analysis (RDA) is a method to determine what capabilities are helpful to solve a dataset.
+Rissanen Data Analysis (RDA) is a method to determine what capabilities are helpful to solve a dataset, as described [our paper](https://arxiv.org/abs/2103.03872).
 This repo includes a simple tutorial on how to run RDA on any dataset with any model of your choice ([![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ethanjperez/rda/blob/master/rda.ipynb) or [view on GitHub](https://github.com/ethanjperez/rda/blob/main/rda.ipynb)).
 In our tutorial, we show how to run RDA on a GLUE dataset (MRPC) by training BERT models, and you'll just need to change a few lines of code to run RDA on another dataset with another model (trained via PyTorch, Tensorflow, or anything else).
 The tutorial is our recommended way to learn about how to use RDA with your own dataset and models.
@@ -673,6 +673,7 @@ python $BASE_DIR/scripts/gender_bias.word_frequency_by_label.py --task $TN  # ru
   author = {Ethan Perez and Douwe Kiela and Kyunghyun Cho},
   title = {Rissanen Data Analysis: Examining Dataset Characteristics via Description Length},
   journal={arXiv},
-  year = {2021}
+  year = {2021},
+  url = {https://arxiv.org/abs/2103.03872}
 }
 ```
