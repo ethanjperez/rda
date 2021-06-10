@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import os
 import pandas as pd
-from tqdm.auto import tqdm
+from tqdm import tqdm
 import pathlib
 import re
 from scipy.stats import multivariate_normal
