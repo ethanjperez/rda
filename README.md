@@ -44,7 +44,7 @@ The descriptions are useful if you would like to run on another task (e.g., regr
 
 Below, we will step through the procedure we used to produce our results.
 To see how we train a model on dataset, please skim through the README to see the bash snippet and python script we use to train that model.
-To see how we compute minimum description length after training our models, please see `scripts/plot_results_prequential.ipynb`.
+To see how we compute minimum description length after training our models, please see `scripts/plot_results.py`.
 
 *Code Overview*:
 - `film/`: Code for training FiLM models on CLEVR (modified from the [FiLM codebase](https://github.com/ethanjperez/film))
